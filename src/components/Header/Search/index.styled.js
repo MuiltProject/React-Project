@@ -2,12 +2,10 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   position: absolute;
-  width: 100%;
+  margin-left: 45%;
+  width: 30%;
   height: 100px;
-
-  background-color: #f8f8f8;
-
-  z-index: 999;
+  background-color: purple;
 `;
 
 export { Container };
