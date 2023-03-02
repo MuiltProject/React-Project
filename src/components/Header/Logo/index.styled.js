@@ -4,7 +4,6 @@ const Container = styled.div`
   position: absolute;
   width: 15%;
   height: 100px;
-  background-color: red;
 `;
 
 const Logo = styled.h1`
