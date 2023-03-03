@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "../../assets/NotFound/pic.png";
 import Button from "@mui/material/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { House, RotateLeft } from "../../assets/FontAwesome";
 
 import * as S from "./index.styled";
 import { useNavigate } from "react-router-dom";
@@ -13,17 +11,18 @@ function NotFound() {
   const goBack = () => {
     navigate(-1);
   };
+  // TODO: 디자인 변경
   return (
     <S.Container>
       <S.Spin src={Image} alt="Not Found" />
-      <S.Text>404 Not Found</S.Text>
+      <S.Text>This is not the web page you are looking for</S.Text>
       <S.ButtonContainer>
-        <Button variant="text" onClick={goBack} startIcon={<FontAwesomeIcon icon={faRotateLeft} />}>
+        <Button variant="text" onClick={goBack} startIcon={<RotateLeft />}>
           <S.ButtonText>Back</S.ButtonText>
         </Button>
       </S.ButtonContainer>
       <S.ButtonContainer>
-        <Button variant="text" href="/" startIcon={<FontAwesomeIcon icon={faHouse} />}>
+        <Button variant="text" href="/" startIcon={<House />}>
           <S.ButtonText>Home</S.ButtonText>
         </Button>
       </S.ButtonContainer>
