@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
 const Container = styled.div`
   display: flex;
@@ -8,13 +7,27 @@ const Container = styled.div`
   padding-top: 5%;
 `;
 
-const Text = styled.p`
-  display: flex;
+const ButtonContainer = styled.div`
+  display: block;
   align-items: center;
   justify-content: center;
+
+  width: 10%;
+`;
+
+const ButtonText = styled.p`
+  font-size: 1.5rem;
+`;
+
+const Text = styled.p`
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 `;
 
 const Spin = styled.img`
+  display: block;
   width: 25%;
   height: auto;
 
@@ -28,4 +41,4 @@ const Spin = styled.img`
   }
 `;
 
-export { Container, Text, Spin };
+export { Container, ButtonContainer, ButtonText, Text, Spin };

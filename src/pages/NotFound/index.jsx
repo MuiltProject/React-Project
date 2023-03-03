@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "../../assets/NotFound/pic.png";
 import Button from "@mui/material/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 import * as S from "./index.styled";
 import { useNavigate } from "react-router-dom";
@@ -13,13 +16,17 @@ function NotFound() {
   return (
     <S.Container>
       <S.Spin src={Image} alt="Not Found" />
-      <S.Text>Not Found</S.Text>
-      <Button variant="contained" href="/">
-        Home
-      </Button>
-      <Button variant="contained" onClick={goBack}>
-        Back
-      </Button>
+      <S.Text>404 Not Found</S.Text>
+      <S.ButtonContainer>
+        <Button variant="text" onClick={goBack} startIcon={<FontAwesomeIcon icon={faRotateLeft} />}>
+          <S.ButtonText>Back</S.ButtonText>
+        </Button>
+      </S.ButtonContainer>
+      <S.ButtonContainer>
+        <Button variant="text" href="/" startIcon={<FontAwesomeIcon icon={faHouse} />}>
+          <S.ButtonText>Home</S.ButtonText>
+        </Button>
+      </S.ButtonContainer>
     </S.Container>
   );
 }
