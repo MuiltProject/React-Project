@@ -1,10 +1,14 @@
 import React from "react";
+import Image from "../../assets/NotFound/pic.png";
+
+import * as S from "./index.styled";
 
 function NotFound() {
   return (
-    <div>
-      <h1>Not Found</h1>
-    </div>
+    <S.Container>
+      <S.Spin src={Image} alt="Not Found" />
+      {/* <h1>Not Found</h1> */}
+    </S.Container>
   );
 }
 export default NotFound;
