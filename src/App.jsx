@@ -1,10 +1,16 @@
 import PageLayout from "./layouts/pages";
 
+import { BrowserRouter as Router } from "react-router-dom";
+
+import Routes from "./routes";
+
 function App() {
   return (
-    <PageLayout>
-      <h1>content Area</h1>
-    </PageLayout>
+    <Router>
+      <PageLayout>
+        <Routes />
+      </PageLayout>
+    </Router>
   );
 }
 
