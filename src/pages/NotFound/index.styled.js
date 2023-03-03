@@ -1,13 +1,20 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const Container = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
+  padding-top: 5%;
+`;
+
+const Text = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Spin = styled.img`
-  margin-top: 50px;
   width: 25%;
   height: auto;
 
@@ -21,4 +28,4 @@ const Spin = styled.img`
   }
 `;
 
-export { Container, Spin };
+export { Container, Text, Spin };
