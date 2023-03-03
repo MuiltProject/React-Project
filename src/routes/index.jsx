@@ -3,6 +3,7 @@ import Details from "../pages/Details";
 import Join from "../pages/Join";
 import Login from "../pages/Login";
 import Main from "../pages/Main";
+import NotFound from "../pages/NotFound";
 import Outfit from "../pages/Outfit";
 import Review from "../pages/Review";
 
@@ -19,6 +20,7 @@ function Routes() {
       <Route path={"/login"} element={<Login />} />
       <Route path={"/outfit"} element={<Outfit />} />
       <Route path={"/review"} element={<Review />} />
+      <Route path={"*"} element={<NotFound />} />
     </BrowserRoutes>
   );
 }
