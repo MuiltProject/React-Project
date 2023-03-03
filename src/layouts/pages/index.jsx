@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import * as S from "./index.styled";
 
 function Page({ children }) {
@@ -8,6 +9,7 @@ function Page({ children }) {
     <S.PageContainer>
       <Header />
       <S.Content>{children}</S.Content>
+      <Footer />
     </S.PageContainer>
   );
 }
