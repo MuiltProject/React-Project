@@ -1,16 +1,16 @@
 import React from "react";
 import * as S from "./index.styled";
 import Logo from "./Logo";
-import Category from "./Category";
+import Nav from "./Nav";
 import Search from "./Search";
 import User from "./User";
 
-function Header() {
+function Header({ children }) {
   return (
     <S.Container>
       <Logo />
-      <Category />
-      <Search />
+      <Nav />
+      <Search /> {/*추후 검색 기능 개발*/}
       <User />
     </S.Container>
   );

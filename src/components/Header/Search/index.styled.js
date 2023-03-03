@@ -5,7 +5,7 @@ const Container = styled.div`
   margin-left: 45%;
   width: 30%;
   height: 100px;
-  background-color: purple;
+  // background-color: purple;
 `;
 
 export { Container };
