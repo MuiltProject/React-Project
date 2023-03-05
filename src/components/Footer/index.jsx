@@ -11,35 +11,31 @@ function Footer() {
       <S.Content>
         <h2>SHOP</h2>
         <S.Text>
-          <S.Link>For Women</S.Link>
+          <S.StyledLink to="/">For Women</S.StyledLink>
         </S.Text>
         <S.Text>
-          <S.Link>For Mem</S.Link>
+          <S.StyledLink to="/">For Men</S.StyledLink>
         </S.Text>
         <S.Text>
-          <S.Link>For Kids</S.Link>
+          <S.StyledLink to="/">For Kids</S.StyledLink>
         </S.Text>
       </S.Content>
       <S.Content>
         <h2>Company</h2>
         <S.Text>
-          <S.Link>Login</S.Link>
+          <S.StyledLink to="/login">Login</S.StyledLink>
         </S.Text>
         <S.Text>
-          <S.Link>Register</S.Link>
+          <S.StyledLink to="/join">Join</S.StyledLink>
         </S.Text>
         <S.Text>
-          <S.Link>Wishlist</S.Link>
+          <S.StyledLink to="/cart">Cart</S.StyledLink>
         </S.Text>
       </S.Content>
       <S.Content>
         <h2>SUPPORT & CONTACT</h2>
-        <S.Text>
-          <S.Link>FAQs</S.Link>
-        </S.Text>
-        <S.Text>
-          <S.Link>Size Guide</S.Link>
-        </S.Text>
+        <S.Text>FAQs</S.Text>
+        <S.Text>Size Guide</S.Text>
         <S.Text>02-1234-5678</S.Text>
         <S.Text>help@project.com</S.Text>
       </S.Content>

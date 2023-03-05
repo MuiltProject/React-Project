@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   position: absolute;
@@ -20,12 +21,15 @@ const Content = styled.div`
 
 const Text = styled.p`
   color: #0f010d;
+`;
+
+const StyledLink = styled(Link)`
+  color: #0f010d;
+  text-decoration: none;
   opacity: 0.5;
   &: hover {
     opacity: 1;
   }
 `;
 
-const Link = styled.a``;
-
-export { Container, Content, Text, Link };
+export { Container, Content, Text, StyledLink };
