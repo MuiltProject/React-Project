@@ -13,7 +13,7 @@ function Nav() {
         </S.Text> */}
       </S.TextContainer>
       <S.TextContainer>
-        <S.Text>Cody</S.Text>
+        <S.Text>Outfit</S.Text>
         {/* <S.Text>
           <FontAwesomeIcon icon={faAngleDown} />
         </S.Text> */}
