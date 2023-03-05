@@ -1,32 +1,38 @@
 import React from "react";
-import Image from "../../assets/NotFound/pic.png";
-import Button from "@mui/material/Button";
-import { House, RotateLeft } from "../../assets/FontAwesome";
-
-import * as S from "./index.styled";
 import { useNavigate } from "react-router-dom";
+
+import { House, RotateLeft } from "../../components/FontAwesome";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import * as S from "./index.styled";
+
+import Image from "../../assets/NotFound/pic.png";
 
 function NotFound() {
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
   };
-  // TODO: 디자인 변경
+
   return (
-    <S.Container>
-      <S.Spin src={Image} alt="Not Found" />
-      <S.Text>This is not the web page you are looking for</S.Text>
+    <div>
+      <S.Container>
+        <S.Spin src={Image} alt="Not Found" />
+      </S.Container>
+      <S.Container>
+        <S.Text>This is not the web page you are looking for</S.Text>
+      </S.Container>
       <S.ButtonContainer>
-        <Button variant="text" onClick={goBack} startIcon={<RotateLeft />}>
-          <S.ButtonText>Back</S.ButtonText>
-        </Button>
+        <Stack direction="row" spacing={2}>
+          <Button variant="text" onClick={goBack} startIcon={<RotateLeft />}>
+            <S.ButtonText>Back</S.ButtonText>
+          </Button>
+          <Button variant="text" href="/" startIcon={<House />}>
+            <S.ButtonText>Home</S.ButtonText>
+          </Button>
+        </Stack>
       </S.ButtonContainer>
-      <S.ButtonContainer>
-        <Button variant="text" href="/" startIcon={<House />}>
-          <S.ButtonText>Home</S.ButtonText>
-        </Button>
-      </S.ButtonContainer>
-    </S.Container>
+    </div>
   );
 }
 export default NotFound;

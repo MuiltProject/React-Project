@@ -8,11 +8,10 @@ const Container = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  display: block;
-  align-items: center;
+  display: flex;
+  align-content: center;
   justify-content: center;
-
-  width: 10%;
+  padding: 3%;
 `;
 
 const ButtonText = styled.p`
@@ -23,7 +22,8 @@ const Text = styled.p`
   display: block;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 1.7rem;
+  text-shadow: 10px 5px 5px block;
 `;
 
 const Spin = styled.img`
