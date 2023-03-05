@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from "./index.styled";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +14,7 @@ function Nav() {
         </S.Text> */}
       </S.TextContainer>
       <S.TextContainer>
-        <S.Text>Cody</S.Text>
+        <S.Text>Outfit</S.Text>
         {/* <S.Text>
           <FontAwesomeIcon icon={faAngleDown} />
         </S.Text> */}
