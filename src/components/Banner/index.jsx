@@ -9,8 +9,8 @@ import kids from "../../assets/Banner/kids.jpg";
 
 function Banner() {
   return (
+    // TODO: 추후 정해지면 URL 변경 필요
     <Carousel indicators={false} navButtonsAlwaysVisible={true} animation={"slide"} duration={2000} interval={6000}>
-      // TODO: 추후 정해지면 URL 변경 필요
       <Link to="/">
         <S.Banner src={men} alt="Men"></S.Banner>
       </Link>
