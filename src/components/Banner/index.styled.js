@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
 
-const Container = styled.div``;
+const Container = styled.div`
+  height: 3000px;
+`;
 
-export { Container };
+const Banner = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+export { Container, Banner };
