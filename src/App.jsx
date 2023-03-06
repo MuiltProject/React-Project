@@ -1,15 +1,19 @@
-import PageLayout from "./layouts/pages";
-
+import { Suspense } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+
 import Routes from "./routes";
+import PageLayout from "./layouts/pages";
+import ScrollToTop from "./components/ScrollToTop";
+import Loading from "./components/Loading";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <PageLayout>
-        <ScrollToTop />
-        <Routes />
+        <Suspense fallback={<Loading />}>
+          <Routes />
+        </Suspense>
       </PageLayout>
     </Router>
   );

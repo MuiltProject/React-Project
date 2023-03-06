@@ -1,11 +1,4 @@
-import Cart from "../pages/Cart";
-import Details from "../pages/Details";
-import Join from "../pages/Join";
-import Login from "../pages/Login";
-import Main from "../pages/Main";
-import NotFound from "../pages/NotFound";
-import Outfit from "../pages/Outfit";
-import Review from "../pages/Review";
+import { Cart, Details, Join, Login, Main, NotFound, Outfit, Review } from "../pages/index";
 
 import React from "react";
 import { Route, Routes as BrowserRoutes } from "react-router-dom";
