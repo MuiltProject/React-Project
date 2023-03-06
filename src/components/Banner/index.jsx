@@ -8,8 +8,8 @@ import women from "../../assets/Banner/women.jpg";
 import kids from "../../assets/Banner/kids.jpg";
 
 function Banner() {
+  // TODO: 추후 정해지면 URL 변경 필요
   return (
-    // TODO: 추후 정해지면 URL 변경 필요
     <Carousel indicators={false} navButtonsAlwaysVisible={true} animation={"slide"} duration={2000} interval={6000}>
       <Link to="/">
         <S.Banner src={men} alt="Men"></S.Banner>
