@@ -1,19 +1,18 @@
 import React from "react";
 
+import LoadingAnimation from "./Animation";
 import * as S from "./index.styled";
-import "./style.css";
 
 function Loading() {
   return (
-    <>
-      <S.Container>
-        <S.Wrapper />
-        <div className="loader ani" />
-      </S.Container>
-      <S.Container>
-        <h1>New content is being imported.</h1>
-      </S.Container>
-    </>
+    <S.Container>
+      <S.Wrapper>
+        <LoadingAnimation />
+      </S.Wrapper>
+      <S.Wrapper>
+        <S.Text>New content is being imported.</S.Text>
+      </S.Wrapper>
+    </S.Container>
   );
 }
 export default Loading;

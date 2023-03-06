@@ -29,13 +29,13 @@
   content: "";
   background-color: #e5cdce;
   transform: scale(0);
-  animation: loader8 1.5s infinite ease-in-out;
+  animation: animation 1.5s infinite ease-in-out;
 }
 .ani:after {
   animation-delay: 0.75s;
 }
 
-@keyframes loader8 {
+@keyframes animation {
   0% {
     transform: translateX(-150%) scale(0);
   }
