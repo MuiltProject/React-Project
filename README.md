@@ -2,7 +2,7 @@
 
 React로 구현하는 쇼핑몰 프로젝트입니다.
 
-## 설치 라이브러리
+## 사용한 기술
 
 ![image](https://user-images.githubusercontent.com/74192619/223370493-e9312c7d-08cd-46c4-ad4a-9d5ac51c72cc.png)
 
