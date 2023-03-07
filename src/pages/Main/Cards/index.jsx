@@ -11,9 +11,9 @@ function Cards() {
   return (
     <S.Container>
       <S.Wrapper>
-        <Card pic={Women} />
-        <Card pic={Men} />
-        <Card pic={Kids} />
+        <Card pic={Women} category={"Women"} />
+        <Card pic={Men} category={"Men"} />
+        <Card pic={Kids} category={"Kids"} />
       </S.Wrapper>
     </S.Container>
   );
