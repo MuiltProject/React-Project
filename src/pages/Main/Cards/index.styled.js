@@ -5,7 +5,19 @@ const Container = styled.div`
   justify-content: center;
   align-content: center;
 
-  height: 75vh;
+  flex-direction: column;
+  margin-top: 10vh;
 `;
 
-export { Container };
+const Wrapper = styled.div`
+  display: flex;
+
+  width: 100%;
+
+  align-content: center;
+  justify-content: center;
+`;
+
+const Header = styled.h1``;
+
+export { Container, Wrapper, Header };
