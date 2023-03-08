@@ -22,9 +22,10 @@ React로 구현하는 쇼핑몰 프로젝트입니다.
 
 ### Local 저장소와 Github 저장소를 연동하는 방법
 
-1. 터미널을 원하는 위치의 상위 폴더로 이동한다.
-2. `git remote add origin https://github.com/MultiProject23/React-Project.git` 를 입력한다.
-3. 연동확인 방법은 `git remote -v` 로 확인할 수 있다.
+1. 터미널을 원하는 위치의 폴더로 이동한다.
+2. `git init` 명령어를 실행한다.
+3. `git remote add origin https://github.com/MultiProject23/React-Project.git` 를 입력한다.
+4. 연동확인 방법은 `git remote -v` 로 확인할 수 있다.
 
 > `origin` 은 `github`로 생각하시면 편합니다.
 
