@@ -11,11 +11,9 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-
-  width: 100%;
-
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 25vh;
 `;
 
 const Header = styled.h1``;

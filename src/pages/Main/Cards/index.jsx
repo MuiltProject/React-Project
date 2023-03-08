@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "../../../components/Card";
+import { Link } from "react-router-dom";
 
 import * as S from "./index.styled";
+import Card from "../../../components/Card";
 
 import Kids from "../../../assets/Card/kids.png";
 import Men from "../../../assets/Card/men.png";
 import Women from "../../../assets/Card/women.png";
-import { Link } from "react-router-dom";
 
 function Cards() {
   return (

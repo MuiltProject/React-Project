@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  margin: 0 7vh;
+  // margin: 0 7vh;
   padding-bottom: 10vh;
 `;
 
@@ -18,6 +18,10 @@ const Header = styled.h1`
   color: #f8f8f8;
   font-size: 2rem;
   margin-top: 40vh;
+  opacity: 0;
+  &: hover {
+    opacity: 1;
+  }
 `;
 
 const Pic = styled.img`
