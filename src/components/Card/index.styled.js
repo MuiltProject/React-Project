@@ -5,6 +5,7 @@ const Container = styled.div`
   padding-bottom: 10vh;
 `;
 
+// TODO: 마우스 호버시 글씨 보이기
 const Wrapper = styled.div`
   display: flex;
   align-content: center;
