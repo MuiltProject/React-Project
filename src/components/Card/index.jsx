@@ -15,4 +15,5 @@ function Card({ URL, pic, category }) {
     </S.Container>
   );
 }
+
 export default Card;
