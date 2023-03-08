@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   align-content: center;
   justify-content: space-between;
-  margin: 0 25vh;
+  margin: 0 15vh;
 `;
 
 const Header = styled.h1``;

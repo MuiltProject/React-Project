@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import * as S from "./index.styled";
 import Card from "../../../components/Card";
@@ -12,15 +11,9 @@ function Cards() {
   return (
     <S.Container>
       <S.Wrapper>
-        <Link to="/example/women">
-          <Card pic={Women} category={"Women"} />
-        </Link>
-        <Link to="/example/men">
-          <Card pic={Men} category={"Men"} />
-        </Link>
-        <Link to="/example/kids">
-          <Card pic={Kids} category={"Kids"} />
-        </Link>
+        <Card URL={"/example/women"} pic={Women} category={"Women"} />
+        <Card URL={"/example/mem"} pic={Men} category={"Men"} />
+        <Card URL={"example/kids"} pic={Kids} category={"Kids"} />
       </S.Wrapper>
     </S.Container>
   );

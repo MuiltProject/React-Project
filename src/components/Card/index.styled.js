@@ -1,11 +1,9 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  // margin: 0 7vh;
   padding-bottom: 10vh;
 `;
 
-// TODO: 마우스 호버시 글씨 보이기
 const Wrapper = styled.div`
   display: flex;
   align-content: center;
@@ -18,10 +16,8 @@ const Header = styled.h1`
   color: #f8f8f8;
   font-size: 2rem;
   margin-top: 40vh;
-  opacity: 0;
-  &: hover {
-    opacity: 1;
-  }
+  text-shadow: 1px 1px 2px black;
+  z-index: 1;
 `;
 
 const Pic = styled.img`
@@ -30,8 +26,9 @@ const Pic = styled.img`
   background-color: #f8f8f8;
   border-radius: 7px;
   transition: all 0.5s;
+  filter: brightness(0.7);
   &: hover {
-    filter: brightness(0.5);
+    filter: brightness(1);
     transform: scale(1.05);
   }
 `;
