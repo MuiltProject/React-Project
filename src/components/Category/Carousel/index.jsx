@@ -3,15 +3,16 @@ import React from "react";
 import * as S from "./index.styled";
 
 import { LeftArrow, RightArrow } from "../../svg/Arrow";
+import Card from "../Card";
 
-function Carousel() {
+function Carousel({ pic, category }) {
   return (
     <S.Container>
       <LeftArrow />
-      <p>카드 입니다.</p>
-      <p>카드 입니다.</p>
-      <p>카드 입니다.</p>
-      <p>카드 입니다.</p>
+      <Card pic={pic} category={category} />
+      <Card pic={pic} category={category} />
+      <Card pic={pic} category={category} />
+      <Card pic={pic} category={category} />
       <RightArrow />
     </S.Container>
   );

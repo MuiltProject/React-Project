@@ -2,10 +2,13 @@ import React from "react";
 
 import * as S from "./index.styled";
 
-function Card() {
+function Card({ pic, category }) {
   return (
     <S.Container>
-      <p>Card By Category</p>
+      <S.Pic src={pic} alt="pic"></S.Pic>
+      <S.Wrapper>
+        <p>{category}</p>
+      </S.Wrapper>
     </S.Container>
   );
 }

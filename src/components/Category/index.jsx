@@ -3,6 +3,7 @@ import TextButton from "../Button";
 import Carousel from "./Carousel";
 
 import * as S from "./index.styled";
+import Pic from "../../assets/Category/women.jpg";
 
 function Category() {
   return (
@@ -16,7 +17,7 @@ function Category() {
         <TextButton category={"Kids"} />
       </S.Wrapper>
       <S.Wrapper>
-        <Carousel />
+        <Carousel pic={Pic} category={"Dress"} />
       </S.Wrapper>
     </S.Container>
   );
