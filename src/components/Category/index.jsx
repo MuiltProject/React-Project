@@ -17,7 +17,7 @@ function Category() {
         <TextButton category={"Kids"} />
       </S.Wrapper>
       <S.Wrapper>
-        <Carousel pic={Pic} category={"Dress"} />
+        <Carousel pic={Pic} category={"Dress"} url={"/example/women/dress"} />
       </S.Wrapper>
     </S.Container>
   );

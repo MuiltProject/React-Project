@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin: 0 3vh;
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,8 +11,13 @@ const Wrapper = styled.div`
 `;
 
 const Pic = styled.img`
-  width: 10vh;
+  width: 15vh;
   height: auto;
+  border-radius: 4px;
 `;
 
-export { Container, Wrapper, Pic };
+const Text = styled.p`
+  text-decoration: none;
+`;
+
+export { Container, Wrapper, Pic, Text };
