@@ -7,12 +7,15 @@ import User from "./User";
 
 function Header({ children }) {
   return (
-    <S.Container>
-      <Logo />
-      <Nav />
-      <Search /> {/*추후 검색 기능 개발*/}
-      <User />
-    </S.Container>
+    <>
+      <S.Container>
+        <Logo />
+        <Nav />
+        <Search /> {/*추후 검색 기능 개발*/}
+        <User />
+      </S.Container>
+    </>
   );
 }
+
 export default Header;

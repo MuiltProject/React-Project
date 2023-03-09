@@ -4,7 +4,7 @@ import * as S from "./index.styled";
 function Logo() {
   return (
     <S.Container>
-      <S.Logo>Shop</S.Logo>
+      <S.Logo>Project</S.Logo>
     </S.Container>
   );
 }
