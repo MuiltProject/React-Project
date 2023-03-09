@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
-  text-align: center;
 `;
 
 const Header = styled.h1`
@@ -21,7 +20,7 @@ const Header = styled.h1`
 `;
 
 const Pic = styled.img`
-  width: 33wh;
+  width: 20vw;
   height: 55vh;
   background-color: #f8f8f8;
   border-radius: 7px;

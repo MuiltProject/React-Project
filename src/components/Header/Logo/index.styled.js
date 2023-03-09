@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   position: absolute;
+  width: 25vh;
   width: 15%;
   height: 100px;
 `;

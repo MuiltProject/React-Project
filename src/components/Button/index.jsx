@@ -1,11 +1,12 @@
 import React from "react";
+
 import * as S from "./index.styled";
 
-function Logo() {
+function TextButton({ category }) {
   return (
     <S.Container>
-      <S.Logo>Project</S.Logo>
+      <S.Text>{category}</S.Text>
     </S.Container>
   );
 }
-export default Logo;
+export default TextButton;

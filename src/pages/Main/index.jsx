@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner";
+import Category from "../../components/Category";
 import Cards from "./Cards";
 
 function Main() {
@@ -7,6 +8,7 @@ function Main() {
     <div>
       <Banner />
       <Cards />
+      <Category />
     </div>
   );
 }
