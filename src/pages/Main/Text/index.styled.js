@@ -7,7 +7,7 @@ const Container = styled.div`
 
   flex-direction: column;
 
-  margin-top: 10vh;
+  margin-top: 20vh;
 `;
 
 const Wrapper = styled.div`

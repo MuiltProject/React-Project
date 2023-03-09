@@ -6,7 +6,7 @@ const Container = styled.div`
   align-content: center;
 
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 20vh;
 `;
 
 const Wrapper = styled.div`
