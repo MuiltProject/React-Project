@@ -51,6 +51,7 @@ const Text = styled.p`
 `;
 
 const StyledLink = styled(Link)`
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
