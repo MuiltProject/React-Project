@@ -7,6 +7,7 @@ const Login = lazy(() => import("./Login/index"));
 const Main = lazy(() => import("./Main/index"));
 const NotFound = lazy(() => import("./NotFound/index"));
 const Outfit = lazy(() => import("./Outfit/index"));
+const Product = lazy(() => import("./Product/index"));
 const Review = lazy(() => import("./Review/index"));
 
-export { Cart, Details, Join, Login, Main, NotFound, Outfit, Review };
+export { Cart, Details, Join, Login, Main, NotFound, Outfit, Product, Review };
