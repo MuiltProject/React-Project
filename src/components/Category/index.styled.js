@@ -6,6 +6,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  margin-top: 20vh;
 `;
 
 const Section = styled.div`
@@ -16,7 +18,9 @@ const Section = styled.div`
   align-items: center;
 `;
 
-const Header = styled.h1``;
+const Header = styled.h1`
+  margin-bottom: 10vh;
+`;
 
 const Wrapper = styled.div`
   display: flex;
