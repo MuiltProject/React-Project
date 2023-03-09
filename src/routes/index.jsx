@@ -1,4 +1,4 @@
-import { Cart, Details, Join, Login, Main, NotFound, Outfit, Product, Review } from "../pages/index";
+import { Cart, Details, Join, Login, Main, My, NotFound, Outfit, Product, Review } from "../pages/index";
 
 import React from "react";
 import { Route, Routes as BrowserRoutes } from "react-router-dom";
@@ -11,6 +11,7 @@ function Routes() {
       <Route path={"/details"} element={<Details />} />
       <Route path={"/join"} element={<Join />} />
       <Route path={"/login"} element={<Login />} />
+      <Route path={"/my"} element={<My />} />
       <Route path={"/outfit"} element={<Outfit />} />
       <Route path={"/product"} element={<Product />} />
       <Route path={"/review"} element={<Review />} />
