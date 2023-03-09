@@ -9,19 +9,19 @@ function User() {
   return (
     <S.Container>
       <S.IconContainer>
-        <S.Icon>
+        <S.StyledLink>
           <FontAwesomeIcon icon={faHeart} />
-        </S.Icon>
+        </S.StyledLink>
       </S.IconContainer>
       <S.IconContainer>
-        <S.Icon>
+        <S.StyledLink to={"/cart"}>
           <FontAwesomeIcon icon={faBasketShopping} />
-        </S.Icon>
+        </S.StyledLink>
       </S.IconContainer>
       <S.IconContainer>
-        <S.Icon>
+        <S.StyledLink to={"/my"}>
           <FontAwesomeIcon icon={faUser} />
-        </S.Icon>
+        </S.StyledLink>
       </S.IconContainer>
     </S.Container>
   );

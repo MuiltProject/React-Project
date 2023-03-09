@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const IconContainer = styled.div`
   float: left;
 `;
 
-const Icon = styled.p`
+const StyledLink = styled(Link)`
   color: #0f010d;
   transform: scale(1.1);
 
@@ -30,4 +31,4 @@ const Icon = styled.p`
   }
 `;
 
-export { Container, IconContainer, Icon };
+export { Container, IconContainer, StyledLink };
