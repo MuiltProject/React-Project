@@ -7,22 +7,13 @@ function Nav() {
   return (
     <S.Container>
       <S.TextContainer>
-        <S.Text>Category</S.Text>
-        {/* <S.Text>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </S.Text> */}
+        <S.StyledLink to={"/product"}>Product</S.StyledLink>
       </S.TextContainer>
       <S.TextContainer>
-        <S.Text>Outfit</S.Text>
-        {/* <S.Text>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </S.Text> */}
+        <S.StyledLink to={"/outfit"}>Outfit</S.StyledLink>
       </S.TextContainer>
       <S.TextContainer>
-        <S.Text>Review</S.Text>
-        {/* <S.Text>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </S.Text> */}
+        <S.StyledLink to={"/review"}>Review</S.StyledLink>
       </S.TextContainer>
     </S.Container>
   );
