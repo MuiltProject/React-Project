@@ -14,12 +14,11 @@ const FlexStyle = styled.div`
 `;
 
 const LinkStyle = styled.div`
-
   margin-top: 100px;
   padding-left: 50px;
 `;
 
-const Slider = styled.div`
+const SliderStyle = styled.div`
   width: 500px;
   height: 800px;
 `;
@@ -32,6 +31,7 @@ const OrderStyle = styled.div`
 `;
 
 function Details() {
+  // 메뉴 클릭 시 해당 컴포넌트로 스크롤이 이동하는 기능 구현
   const sizeTableRef = useRef(null);
   const relatedProductRef = useRef(null);
 
@@ -46,8 +46,7 @@ function Details() {
   return (
 
     <div>
-     
-<br/>
+      <br/>
       <LinkStyle>
         <div>
           <LinkMenu />
@@ -55,11 +54,11 @@ function Details() {
       </LinkStyle>
 
       <FlexStyle>
-        <Slider>
+        <SliderStyle>
           <div id="slider">
             <SimpleSlider />
           </div>
-        </Slider>
+        </SliderStyle>
         <OrderStyle>
           <div>
             <OrderContainer />
@@ -78,47 +77,3 @@ function Details() {
   );
 }
 export default Details;
-
-// function Container() {
-//   const sizeTableRef = useRef(null);
-//   
-
-//   const handleSizeTabClick = () => {
-//     sizeTableRef.current.scrollIntoView({ behavior: 'smooth' });
-//   };
-
-//   return (
-
-//     <div>
-//       <Header></Header>
-// <br/>
-//       <LinkStyle>
-//         <div>
-//           <LinkMenu />
-//         </div>
-//       </LinkStyle>
-
-//       <FlexStyle>
-//         <Slider>
-//           <div id="slider">
-//             <SimpleSlider />
-//           </div>
-//         </Slider>
-//         <OrderStyle>
-//           <div>
-//             <OrderContainer />
-//           </div>
-//         </OrderStyle>
-//       </FlexStyle>
-      
-//       <br />
-//       <br />
-//       <MenuTabs onSizeTabClick={handleSizeTabClick} />
-//       <div>
-//         <Content sizeTableRef={sizeTableRef} />
-//       </div>
-//       <Footer></Footer>
-//     </div>
-//   );
-// }
-// export default Container;
