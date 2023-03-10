@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import Content from "./Content";
 import RelatedProduct from "./RelatedProduct";
-import ShippingInfo from "./ShippingInfo";
+
 import SizeTable from "./SizeTable";
 
 import React, { useState } from "react";

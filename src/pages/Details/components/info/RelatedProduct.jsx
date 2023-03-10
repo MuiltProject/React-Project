@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Carousel } from 'react-bootstrap';
-import c1 from '.././images/c1.jpg';
-import c2 from '.././images/c2.jpg';
-import c3 from '.././images/c3.jpg';
-import c4 from '.././images/c4.jpg';
-import c5 from '.././images/c5.jpg';
+import c1 from '../../images/c1.jpg';
+import c2 from '../../images/c2.jpg';
+import c3 from '../../images/c3.jpg';
+import c4 from '../../images/c4.jpg';
+import c5 from '../../images/c5.jpg';
 import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { BsChevronLeft } from "react-icons/bs";
+import { BsChevronRight } from "react-icons/bs";
 
 
 
@@ -60,13 +59,13 @@ function RelatedProduct() {
     <div className="Related">
       <div style={{ textAlign: "center" }}>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button onClick={handlePrevClick}><FontAwesomeIcon icon={ faAngleLeft } /></Button>
+          <Button onClick={handlePrevClick}><BsChevronLeft /></Button>
           {visibleData.map((item, index) => (
             <div key={index} style={{ margin: "0 30px"}}>
               <img src={item.image} alt="carousel-thumbnail" style={{ width: "250px", height: "300px"}} />
             </div>
           ))}
-          <Button onClick={handleNextClick}><FontAwesomeIcon icon={ faAngleRight } /></Button>
+          <Button onClick={handleNextClick}><BsChevronRight /></Button>
         </div>
       </div>
     </div>

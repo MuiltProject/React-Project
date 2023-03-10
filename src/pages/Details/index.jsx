@@ -1,10 +1,10 @@
 import React from "react";
-import SimpleSlider from "./components/SimpleSlider";
-import OrderContainer from "./components/OrderContainer";
+import SimpleSlider from "./components/carousel/SimpleSlider";
+import OrderContainer from "./components/ordercontainer/OrderContainer";
 import styled from "@emotion/styled";
-import MenuTabs from "./components/MenuTabs";
+import MenuTabs from "./components/info/MenuTabs";
 import LinkMenu from "./components/LinkMenu";
-import Content from "./components/Content";
+import Content from "./components/info/Content";
 import { useRef } from 'react';
 
 
