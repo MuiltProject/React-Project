@@ -1,9 +1,10 @@
 import React from "react";
+import ReviewList from "../../components/Review";
 
 function Review() {
   return (
     <div>
-      <h1>Review</h1>
+      <ReviewList />
     </div>
   );
 }
