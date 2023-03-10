@@ -1,11 +1,11 @@
 .text {
-  text-align: right;
+  text-align: center;
   font-size: 13px;
   margin-top: 7px;
 }
 
 .product-name {
-  text-align: right;
+  text-align: center;
 }
 
 .TextBox {
@@ -16,7 +16,6 @@
 }
 
 .page-container {
-  max-width: 1500px;
   margin: auto;
   padding: 32px 0;
 }
