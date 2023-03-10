@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -25,10 +26,14 @@ const OrderSummary = styled.li`
 `;
 
 const OrderPrice = styled.li`
-  width: 19%;
+  width: 20%;
 `;
 
 const OrderStatus = styled.li`
   width: 20%;
 `;
-export { Container, Line, ProductList, OrderInfo, OrderSummary, OrderPrice, OrderStatus };
+
+const ProdLink = styled(Link)`
+  color: black;
+`;
+export { Container, Line, ProductList, OrderInfo, OrderSummary, ProdLink, OrderPrice, OrderStatus };

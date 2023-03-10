@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   margin-top: 5vh;
+  margin-bottom: 5vh;
 `;
 
 const BoldLine = styled.div`
