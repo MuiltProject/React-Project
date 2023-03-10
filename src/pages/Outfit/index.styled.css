@@ -1,0 +1,58 @@
+#outfit {
+  width: 1262px;
+  margin: 0 auto;
+  padding: 0px;
+  border: 0px;
+}
+#outfit h1 {
+  font-family: "Work Sans";
+  font-style: bold;
+  color: #000000;
+  text-align: center;
+  font-size: 64px;
+  margin: 51px 0px;
+}
+.image_box {
+  width: 243px;
+  height: 292px;
+  display: inline-block;
+  margin: 0px 29px;
+}
+.image {
+  width: 243px;
+  height: 243px;
+  display: inline-block;
+  margin-bottom: 19px;
+}
+.text {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+#main .bottom {
+  width: 1262px;
+  margin: 0 auto;
+}
+table {
+  margin: 0 auto;
+}
+input .search_bar {
+  display: inline-block;
+}
+#img_button {
+  width: 17.5px;
+  height: 13.44px;
+  background: white;
+}
+.page_nation {
+  display: inline-block;
+}
+.page_nation a {
+  text-decoration: none;
+  color: black;
+}
+.page_nation a:active {
+  color: gray;
+}
