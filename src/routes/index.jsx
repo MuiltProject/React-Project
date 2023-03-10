@@ -8,7 +8,9 @@ function Routes() {
     <BrowserRoutes>
       <Route path={"/"} element={<Main />} />
       <Route path={"/cart"} element={<Cart />} />
-      <Route path={"/details"} element={<Details />} />
+      <Route path={"/details"}>
+        <Route path={":id"} element={<Details />} />
+      </Route>
       <Route path={"/join"} element={<Join />} />
       <Route path={"/login"} element={<Login />} />
       <Route path={"/my"} element={<My />} />
