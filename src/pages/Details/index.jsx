@@ -1,12 +1,11 @@
 import React from "react";
-import SimpleSlider from "./carousel/SimpleSlider";
-import OrderContainer from "./order/OrderContainer";
+import SimpleSlider from "./carousel";
+import OrderContainer from "./order/orderContainer";
 import styled from "@emotion/styled";
-import MenuTabs from "./info/MenuTabs";
-import LinkMenu from "./info/LinkMenu";
-import Content from "./info/Content";
-import { useRef } from 'react';
-
+import MenuTabs from "./info/menuTabs";
+import LinkMenu from "./info/linkMenu";
+import Content from "./info/content";
+import { useRef } from "react";
 
 const FlexStyle = styled.div`
   display: flex;
@@ -36,17 +35,16 @@ function Details() {
   const relatedProductRef = useRef(null);
 
   const handleSizeTabClick = () => {
-    sizeTableRef.current.scrollIntoView({ behavior: 'smooth' });
+    sizeTableRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleReletedTabClick = () => {
-    relatedProductRef.current.scrollIntoView({ behavior: 'smooth' });
+    relatedProductRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-
     <div>
-      <br/>
+      <br />
       <LinkStyle>
         <div>
           <LinkMenu />
@@ -65,14 +63,13 @@ function Details() {
           </div>
         </OrderStyle>
       </FlexStyle>
-      
+
       <br />
       <br />
-      <MenuTabs onSizeTabClick={handleSizeTabClick} onReletedTabClick={handleReletedTabClick}/>
+      <MenuTabs onSizeTabClick={handleSizeTabClick} onReletedTabClick={handleReletedTabClick} />
       <div>
-        <Content sizeTableRef={sizeTableRef} relatedProductRef={relatedProductRef}/>
+        <Content sizeTableRef={sizeTableRef} relatedProductRef={relatedProductRef} />
       </div>
-      
     </div>
   );
 }

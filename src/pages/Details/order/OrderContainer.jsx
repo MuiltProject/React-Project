@@ -1,9 +1,9 @@
 import React from "react";
-import SizeButton from "./SizeButton";
-import StockButton from "./StockButton";
-import DeliveryButton from "./DeliveryButton";
-import CartButton from "./CartButton";
-import SizeCheck from "./SizeCheck";
+import SizeButton from "./sizeButton";
+import StockButton from "./stockButton";
+import DeliveryButton from "./deliveryButton";
+import CartButton from "./cartButton";
+import SizeCheck from "./sizeCheck";
 
 const ListStyle = {
   listStyleType: "none",

@@ -6,9 +6,9 @@ import coat5 from "../../../assets/Details/coat5.jpg";
 import coat6 from "../../../assets/Details/coat6.jpg";
 import coat7 from "../../../assets/Details/coat7.jpg";
 import coat8 from "../../../assets/Details/coat8.jpg";
-import RelatedProduct from "./RelatedProduct";
+import RelatedProduct from "./relatedProduct";
 
-import SizeTable from "./SizeTable";
+import SizeTable from "./sizeTable";
 
 // const FlexStyle = styled.div`
 
