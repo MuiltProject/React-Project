@@ -1,12 +1,13 @@
 import React from "react";
-import SimpleSlider from "./components/SimpleSlider";
-import OrderContainer from "./components/OrderContainer";
+import SimpleSlider from "./SimpleSlider";
+import OrderContainer from "./OrderContainer";
 import styled from "@emotion/styled";
-import MenuTabs from "./components/MenuTabs";
-import LinkMenu from "./components/LinkMenu";
-import Content from "./components/Content";
+import MenuTabs from "./MenuTabs";
+import LinkMenu from "./LinkMenu";
+import Content from "./Content";
 import { useRef } from 'react';
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 const FlexStyle = styled.div`
   display: flex;
@@ -31,7 +32,7 @@ const OrderStyle = styled.div`
   margin-top: 30px;
 `;
 
-function Details() {
+function Container() {
   const sizeTableRef = useRef(null);
   const relatedProductRef = useRef(null);
 
@@ -46,7 +47,7 @@ function Details() {
   return (
 
     <div>
-     
+      <Header></Header>
 <br/>
       <LinkStyle>
         <div>
@@ -73,52 +74,9 @@ function Details() {
       <div>
         <Content sizeTableRef={sizeTableRef} relatedProductRef={relatedProductRef}/>
       </div>
-      
+      <Footer></Footer>
     </div>
   );
 }
-export default Details;
+export default Container;
 
-// function Container() {
-//   const sizeTableRef = useRef(null);
-//   
-
-//   const handleSizeTabClick = () => {
-//     sizeTableRef.current.scrollIntoView({ behavior: 'smooth' });
-//   };
-
-//   return (
-
-//     <div>
-//       <Header></Header>
-// <br/>
-//       <LinkStyle>
-//         <div>
-//           <LinkMenu />
-//         </div>
-//       </LinkStyle>
-
-//       <FlexStyle>
-//         <Slider>
-//           <div id="slider">
-//             <SimpleSlider />
-//           </div>
-//         </Slider>
-//         <OrderStyle>
-//           <div>
-//             <OrderContainer />
-//           </div>
-//         </OrderStyle>
-//       </FlexStyle>
-      
-//       <br />
-//       <br />
-//       <MenuTabs onSizeTabClick={handleSizeTabClick} />
-//       <div>
-//         <Content sizeTableRef={sizeTableRef} />
-//       </div>
-//       <Footer></Footer>
-//     </div>
-//   );
-// }
-// export default Container;
