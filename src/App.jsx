@@ -5,17 +5,21 @@ import Routes from "./routes";
 import PageLayout from "./layouts/pages";
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from "./components/Loading";
+import GlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <PageLayout>
-        <Suspense fallback={<Loading />}>
-          <Routes />
-        </Suspense>
-      </PageLayout>
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router>
+        <ScrollToTop />
+        <PageLayout>
+          <Suspense fallback={<Loading />}>
+            <Routes />
+          </Suspense>
+        </PageLayout>
+      </Router>
+    </>
   );
 }
 
