@@ -47,6 +47,7 @@ function Join() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(email, pw, name, birth, phone1, phone2, phone3);
   };
 
   return (
@@ -62,6 +63,7 @@ function Join() {
             value={email}
             placeholder="이메일 주소 입력, ex)abc1234@gmail.com"
             onChange={onHandleEmail}
+            required
           />
           <br />
         </div>
@@ -71,11 +73,12 @@ function Join() {
           <input
             id="pw"
             type="password"
-            minlength="8"
-            maxlength="12"
+            minLength="8"
+            maxLength="12"
             value={pw}
             placeholder="숫자와 알파벳만 사용, 8~12자리"
             onChange={onHandlePw}
+            required
           />
           <br />
         </div>
@@ -85,11 +88,12 @@ function Join() {
           <input
             id="pwcheck"
             type="password"
-            minlength="8"
-            maxlength="12"
+            minLength="8"
+            maxLength="12"
             value={pwCheck}
             placeholder="비밀번호를 한 번 더 입력하세요"
             onChange={onHandlePwCheck}
+            required
           />
           <br />
           <span>{pw !== pwCheck && <p>비밀번호가 일치하지 않습니다!</p>}</span>
@@ -103,6 +107,7 @@ function Join() {
             value={name}
             placeholder="Name"
             onChange={onHandleName}
+            required
           />
           <br />
         </div>
@@ -111,10 +116,12 @@ function Join() {
           <br />
           <input
             id="birth"
-            type="text"
+            type="number"
+            maxLength="6"
             value={birth}
             placeholder="주민등록번호 앞자리만 입력 ex)230101"
             onChange={onHandleBirth}
+            required
           />
           <br />
         </div>
@@ -124,28 +131,31 @@ function Join() {
           <input
             id="phone1"
             type="number"
-            maxlength="3"
+            maxLength="3"
             value={phone1}
             placeholder="010"
             onChange={onHandlePhone1}
+            required
           />
           -
           <input
             id="phone2"
             type="number"
-            maxlength="4"
+            maxLength="4"
             value={phone2}
             placeholder="1234"
             onChange={onHandlePhone2}
+            required
           />
           -
           <input
             id="phone3"
             type="number"
-            maxlength="4"
+            maxLength="4"
             value={phone3}
             placeholder="5678"
             onChange={onHandlePhone3}
+            required
           />
           <br />
         </div>
