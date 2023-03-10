@@ -1,6 +1,6 @@
 //import Button from 'react-bootstrap/Button';
 import styled from "@emotion/styled";
-import SimpleSlider from "../carousel";
+import SimpleSlider from ".././carousel/SimpleSlider";
 
 const Button = styled.button`
   background-color: #0f010d;
