@@ -1,7 +1,5 @@
 import { css } from "@emotion/react";
 
-const { origin } = window.location;
-
 const fontStyle = css`
   @font-face {
     font-family: "MICEGothic_Bold";
