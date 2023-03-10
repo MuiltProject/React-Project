@@ -1,34 +1,25 @@
-import Nav from 'react-bootstrap/Nav';
-import Tab from 'react-bootstrap/Tab';
-import Content from "./Content";
-import RelatedProduct from "./RelatedProduct";
+import React from "react";
 
-import SizeTable from "./SizeTable";
+import Nav from "react-bootstrap/Nav";
+import Tab from "react-bootstrap/Tab";
 
-import React, { useState } from "react";
-
-
-
-function MenuTabs({ onSizeTabClick, onReletedTabClick}) {
-
-  const MenuStyle = { 
-    color: '#807675', 
-    fontSize: "24px"
+function MenuTabs({ onSizeTabClick, onReletedTabClick }) {
+  const MenuStyle = {
+    color: "#807675",
+    fontSize: "24px",
   };
-
-  
 
   //const [activeTab, setActiveTab] = useState('Content');
 
   const handleSizeTabClick = (event) => {
     event.preventDefault();
-   //setActiveTab('Content');
+    //setActiveTab('Content');
     onSizeTabClick();
   };
 
   const handleReletedTabClick = (event) => {
     event.preventDefault();
-   //setActiveTab('RelatedProducts');
+    //setActiveTab('RelatedProducts');
     onReletedTabClick();
   };
 
@@ -36,20 +27,22 @@ function MenuTabs({ onSizeTabClick, onReletedTabClick}) {
     <Tab.Container id="tabs" defaultActiveKey="Content">
       <Nav justify variant="tabs">
         <Nav.Item>
-          <Nav.Link eventKey="Content" style={ MenuStyle }>상세정보</Nav.Link>
+          <Nav.Link eventKey="Content" style={MenuStyle}>
+            상세정보
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="Size" onClick={handleSizeTabClick} style={ MenuStyle }>
+          <Nav.Link eventKey="Size" onClick={handleSizeTabClick} style={MenuStyle}>
             사이즈
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="RelatedProducts" onClick={handleReletedTabClick} style={ MenuStyle }>
+          <Nav.Link eventKey="RelatedProducts" onClick={handleReletedTabClick} style={MenuStyle}>
             연관상품
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      
+
       {/* <Tab.Content>
         <Tab.Pane eventKey="Content">
           <Content />
@@ -68,14 +61,10 @@ function MenuTabs({ onSizeTabClick, onReletedTabClick}) {
 
 export default MenuTabs;
 
-
-
-
-
 // function MenuTabs({ onSizeTabClick, onReletedTabClick}) {
 
-//   const MenuStyle = { 
-//     color: '#807675' 
+//   const MenuStyle = {
+//     color: '#807675'
 //   };
 //   const [activeTab, setActiveTab] = useState('Content');
 
@@ -117,7 +106,7 @@ export default MenuTabs;
 //         <Nav.Link eventKey="ShippingInfo" onClick={handleShippingTabClick} style={ MenuStyle }>배송/교환/반품</Nav.Link>
 //       </Nav.Item>
 //     </Nav>
-    
+
 //     <Tab.Content>
 //       <Tab.Pane eventKey="Content">
 //         <Content />
@@ -136,7 +125,6 @@ export default MenuTabs;
 //       </Tab.Pane>
 //     </Tab.Content>
 
-    
 //     </Tab.Container>
 //   );
 // }
@@ -145,8 +133,8 @@ export default MenuTabs;
 
 // function MenuTabs({ onSizeTabClick, onReletedTabClick}) {
 
-//   const MenuStyle = { 
-//     color: '#807675' 
+//   const MenuStyle = {
+//     color: '#807675'
 //   };
 
 //   const handleSizeTabClick = (event) => {
@@ -180,7 +168,7 @@ export default MenuTabs;
 //         <Nav.Link eventKey="ShippingInfo" style={ MenuStyle }>배송/교환/반품</Nav.Link>
 //       </Nav.Item>
 //     </Nav>
-    
+
 //     <Tab.Content>
 //       <Tab.Pane eventKey="Content">
 //         <Content />
@@ -199,11 +187,8 @@ export default MenuTabs;
 //       </Tab.Pane>
 //     </Tab.Content>
 
-    
 //     </Tab.Container>
 //   );
 // }
 
 // export default MenuTabs;
-
-

@@ -41,9 +41,9 @@ function Join() {
     setPhone3(e.target.value);
   };
 
-  const onHandleEmailCheck = () => {
-    //이메일 중복체크, 차후에 구현
-  };
+  //이메일 중복체크, 차후에 구현
+  // const onHandleEmailCheck = () => {
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -101,14 +101,7 @@ function Join() {
         <div className="list-group">
           <label>이름</label>
           <br />
-          <input
-            id="name"
-            type="text"
-            value={name}
-            placeholder="Name"
-            onChange={onHandleName}
-            required
-          />
+          <input id="name" type="text" value={name} placeholder="Name" onChange={onHandleName} required />
           <br />
         </div>
         <div className="list-group">
