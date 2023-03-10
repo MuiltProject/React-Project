@@ -25,7 +25,7 @@ const Review_Modal_Body = styled.div`
 `
 const flexContainer = styled.div`
   background-color: #8CAC6A;
-   border : 1px solid #d3d3d3;
+  border : 1px solid #d3d3d3;
   display: flex;
   justify-content: left;
   align-items : center;
@@ -44,6 +44,7 @@ const Review_Modal_Body_section1 = styled.div`
   height : 100%;  
   user-select: none;
   // border : 1px solid red;
+  
 }
 `
 const Review_Modal_Body_section2 = styled.div`

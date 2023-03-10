@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Review_list = styled.div`
-  background-color: blue;
+  background-color: #f8f8f8;
   width: 80%;
   display: flex;
   flex-direction: column;
