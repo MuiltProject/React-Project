@@ -10,10 +10,6 @@ const ListStyle = {
   listStyleType: "none"
 };
 
-// const TitleText = {
-//   fontSize:'20px'
-// };
-
 const BorderBottomStyle = {
   borderBottomColor: '#807675',
   borderBottomWidth: '2px',
@@ -30,7 +26,6 @@ const BorderTopStyle = {
 const Location = {
   display: "flex", 
   justifyContent: "center" 
-  //margin: "0 auto"
 };
 
 const OrderContainer = () => {
@@ -81,7 +76,7 @@ const OrderContainer = () => {
   <DeliveryButton></DeliveryButton>
   
 </div>
-    /* 사이즈 및 상품 선택 장바구니 버튼 모달 3개(사이즈 가이드, 재고 상태, 배송 기간) */
+
 )
 
 };

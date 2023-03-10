@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-//import styled from "@emotion/styled";
 
 const ButtonStyle = {
   backgroundColor: 'white',
@@ -63,6 +61,3 @@ function SizeCheck() {
 }
 
 export default SizeCheck;
-
-
-

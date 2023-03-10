@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Carousel } from 'react-bootstrap';
-import c1 from '../../images/c1.jpg';
-import c2 from '../../images/c2.jpg';
-import c3 from '../../images/c3.jpg';
-import c4 from '../../images/c4.jpg';
-import c5 from '../../images/c5.jpg';
+import c1 from '../../../assets/Details/c1.jpg';
+import c2 from '../../../assets/Details/c2.jpg';
+import c3 from '../../../assets/Details/c3.jpg';
+import c4 from '../../../assets/Details/c4.jpg';
+import c5 from '../../../assets/Details/c5.jpg';
 import styled from "@emotion/styled";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
@@ -37,6 +37,7 @@ function RelatedProduct() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numVisible, setNumVisible] = useState(3);
 
+  // 왼쪽 화살표 클릭 시 왼쪽 이미지 show
   const handlePrevClick = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -44,7 +45,7 @@ function RelatedProduct() {
       setCurrentIndex(data.length - numVisible);
     }
   };
-
+// 오른쪽 화살표 클릭 시 왼쪽 이미지 show
   const handleNextClick = () => {
     if (currentIndex + numVisible < data.length) {
       setCurrentIndex(currentIndex + 1);
