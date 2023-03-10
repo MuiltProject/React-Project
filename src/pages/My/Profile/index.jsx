@@ -22,7 +22,7 @@ function Profile() {
             <p>010-1234-5678</p>
           </S.TextSection>
         </S.Section>
-        {/* TODO */}
+        {/* TODO: 비밀번호 변경폼 만들기 */}
       </S.Wrapper>
     </S.Container>
   );

@@ -4,15 +4,22 @@ const Container = styled.div`
   margin-top: 5vh;
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
+const BoldLine = styled.div`
+  background-color: black;
+  margin-top: -1.5vh;
   width: 50vw;
-  height: 50vh;
-
-  border-radius: 10px;
-
-  background-color: #f8f8f8;
+  height: 2px;
 `;
 
-export { Container, Wrapper };
+const Line = styled.div`
+  background-color: black;
+  width: 50vw;
+  height: 1px;
+`;
+
+const Wrapper = styled.div`
+  justify-content: center;
+  width: 50vw;
+`;
+
+export { Container, BoldLine, Line, Wrapper };

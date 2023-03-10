@@ -6,7 +6,7 @@ const Container = styled.div`
 
 const Line = styled.div`
   background-color: black;
-  margin-top: -2vh;
+  margin-top: -1.5vh;
   margin-bottom: 5vh;
   width: 50vw;
   height: 1px;
@@ -19,8 +19,6 @@ const Wrapper = styled.div`
   flex-direction: row;
 
   border-radius: 10px;
-
-  //   background-color: #f8f8f8;
 `;
 
 const Section = styled.div`
