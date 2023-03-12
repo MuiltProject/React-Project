@@ -22,7 +22,6 @@ function Profile({ name, email, phoneNumber }) {
             <S.Text>{phoneNumber}</S.Text>
           </S.TextSection>
         </S.Section>
-        {/* TODO: 비밀번호 변경폼 만들기 */}
       </S.Wrapper>
     </S.Container>
   );

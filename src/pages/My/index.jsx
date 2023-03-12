@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import Profile from "./Profile";
-import Orders from "./Orders";
+import Profile from "../../components/My/Profile";
+import Orders from "../../components/My/Orders";
 import * as S from "./index.styled";
-import Address from "./Address";
+import Address from "../../components/My/Address";
 
 import Json from "../../data/MyPage/data.json";
 
