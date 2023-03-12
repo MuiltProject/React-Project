@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as S from "./index.styled";
+import Output from "./Output";
 
 function Profile({ name, email, phoneNumber }) {
   return (
@@ -9,18 +10,9 @@ function Profile({ name, email, phoneNumber }) {
       <S.Line />
       <S.Wrapper>
         <S.Section>
-          <S.TextSection>
-            <S.ThinText>이름</S.ThinText>
-            <S.Text>{name}</S.Text>
-          </S.TextSection>
-          <S.TextSection>
-            <S.ThinText>이메일</S.ThinText>
-            <S.Text>{email}</S.Text>
-          </S.TextSection>
-          <S.TextSection>
-            <S.ThinText>전화번호</S.ThinText>
-            <S.Text>{phoneNumber}</S.Text>
-          </S.TextSection>
+          <Output directive={"이름"} value={name} />
+          <Output directive={"이메일"} value={email} />
+          <Output directive={"전화번호"} value={phoneNumber} />
         </S.Section>
       </S.Wrapper>
     </S.Container>
