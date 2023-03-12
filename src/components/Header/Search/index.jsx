@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { TextField } from "@mui/material";
+
 import * as S from "./index.styled";
-import { useNavigate } from "react-router-dom";
 
 function Search() {
   const [value, setValue] = useState({});
@@ -15,6 +16,7 @@ function Search() {
   const handleOnKeyPress = (e) => {
     if (e.key === "Enter") {
       navigate(`/product?search=${value}`);
+      e.target.value = null;
     }
   };
 
