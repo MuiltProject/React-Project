@@ -15,9 +15,9 @@ function Card({ productId, productImg, productName, productPrice }) {
         <img className="image" src={productImg} alt=""></img>
       </Link>
       <div>
-        <div className="text">
-          <h3>{productName}</h3>
-          <h4>{formatPrice}원</h4>
+        <div className="text-container">
+          <p className="text">{productName}</p>
+          <p className="text">{formatPrice}원</p>
         </div>
       </div>
     </div>

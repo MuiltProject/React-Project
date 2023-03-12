@@ -4,8 +4,12 @@
 }
 
 .TextBox {
-  text-align: left;
-  font-size: 20px;
-  margin-top: 18px;
-  margin-left: 20px;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

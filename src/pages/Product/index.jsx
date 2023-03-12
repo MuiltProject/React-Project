@@ -7,16 +7,15 @@ const Product = () => {
   return (
     <div className="Container">
       <div className="TextBox">
-        <h2>New Arrival</h2>
+        <h1>신상품</h1>
       </div>
-      <hr></hr>
-      <div>
+      <div className="Wrapper">
         <Card productId={"1"} productImg={"img/03.jpg"} productName={"데님 자켓"} productPrice={218000} />
-        <Card productId={"2"} productImg={"img/04.jpg"} productName={"데님 자켓"} productPrice={218000} />
-        <Card productId={"3"} productImg={"img/05.jpg"} productName={"가죽 자켓"} productPrice={218000} />
-        <Card productId={"4"} productImg={"img/06.jpg"} productName={"데님 자켓"} productPrice={218000} />
-        <Card productId={"5"} productImg={"img/07.jpg"} productName={"롱 무엇"} productPrice={218000} />
-        <Card productId={"6"} productImg={"img/08.jpg"} productName={"후드티"} productPrice={218000} />
+        <Card productId={"2"} productImg={"img/04.jpg"} productName={"데님 자켓"} productPrice={118000} />
+        <Card productId={"3"} productImg={"img/05.jpg"} productName={"가죽 자켓"} productPrice={1218000} />
+        <Card productId={"4"} productImg={"img/06.jpg"} productName={"데님 자켓"} productPrice={98000} />
+        <Card productId={"5"} productImg={"img/07.jpg"} productName={"롱 무엇"} productPrice={508000} />
+        <Card productId={"6"} productImg={"img/08.jpg"} productName={"후드티"} productPrice={88000} />
       </div>
     </div>
   );
