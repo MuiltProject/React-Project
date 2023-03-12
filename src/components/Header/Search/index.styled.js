@@ -7,4 +7,9 @@ const Container = styled.div`
   width: 40vw;
 `;
 
-export { Container };
+const Wrapper = styled.div`
+  width: 60%;
+  margin-bottom: 3%;
+`;
+
+export { Container, Wrapper };
