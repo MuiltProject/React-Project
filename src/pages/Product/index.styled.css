@@ -13,3 +13,8 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.Text {
+  text-align: right;
+  margin-right: 10vw;
+}
