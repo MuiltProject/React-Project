@@ -1,17 +1,19 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  position: absolute;
-  width: 25vh;
-  width: 15%;
-  height: 100px;
+  display: flex;
+  justify-content: center;
+  width: 20vw;
 `;
 
-const Logo = styled.h1`
+const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  font-size: 2rem;
   color: #0f010d;
+  text-decoration: none;
 `;
 
-export { Container, Logo };
+export { Container, StyledLink };

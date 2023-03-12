@@ -5,13 +5,13 @@ import Nav from "./Nav";
 import Search from "./Search";
 import User from "./User";
 
-function Header({ children }) {
+function Header() {
   return (
     <>
       <S.Container>
         <Logo />
         <Nav />
-        <Search /> {/*추후 검색 기능 개발*/}
+        <Search />
         <User />
       </S.Container>
     </>

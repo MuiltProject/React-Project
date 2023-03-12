@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
+  display: flex;
   width: 100%;
-  height: 100px;
-
+  height: 80px;
   background-color: #f8f8f8;
-
   z-index: 999;
 `;
 

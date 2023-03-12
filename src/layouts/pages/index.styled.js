@@ -6,7 +6,7 @@ const PageContainer = styled.div`
 
 const Content = styled.div`
   min-height: 824px;
-  padding-top: 100px;
+  padding-top: 80px;
 `;
 
 export { PageContainer, Content };

@@ -4,7 +4,7 @@ import * as S from "./index.styled";
 function Logo() {
   return (
     <S.Container>
-      <S.Logo>Project</S.Logo>
+      <S.StyledLink to={"/"}>쇼핑몰</S.StyledLink>
     </S.Container>
   );
 }
