@@ -5,6 +5,8 @@ import Orders from "./Orders";
 import * as S from "./index.styled";
 import Address from "./Address";
 
+import Json from "../../data/MyPage/data.json";
+
 function My() {
   const [option, setOption] = useState(0);
 
@@ -12,6 +14,7 @@ function My() {
     setOption(number);
   };
 
+  // TODO: 추후 API 을 가져오는 로직 필요함
   return (
     <S.Container>
       {option === 0 && (
@@ -21,8 +24,7 @@ function My() {
             <S.Header onClick={() => changeOption(1)}>주소정보</S.Header>
             <S.Header onClick={() => changeOption(2)}>주문/배송</S.Header>
           </S.NavWrapper>
-          {/* JSON 파일 */}
-          <Profile name={"홍길동"} email={"project0109@gmail.com"} phoneNumber={"010-1234-5678"} />
+          <Profile name={Json.name} email={Json.email} phoneNumber={Json.phone_number} />
         </S.Section>
       )}
       {option === 1 && (
@@ -32,8 +34,7 @@ function My() {
             <S.SelectHeader>주소정보</S.SelectHeader>
             <S.Header onClick={() => changeOption(2)}>주문/배송</S.Header>
           </S.NavWrapper>
-          {/* JSON 파일 */}
-          <Address zipCode={"12345"} address={"서울시 강남구 어딘가"} recipient={"홍길동"} />
+          <Address zipCode={Json.zip_code} address={Json.address} recipient={Json.recipient} />
         </S.Section>
       )}
       {option === 2 && (
@@ -43,7 +44,7 @@ function My() {
             <S.Header onClick={() => changeOption(1)}>주소정보</S.Header>
             <S.SelectHeader>주문/배송</S.SelectHeader>
           </S.NavWrapper>
-          <Orders />
+          <Orders count={Json.count} orders={Json.orders} />
         </S.Section>
       )}
     </S.Container>
