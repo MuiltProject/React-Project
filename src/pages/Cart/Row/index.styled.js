@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -16,42 +17,61 @@ const ProductList = styled.ul`
   width: 70vw;
   text-align: center;
   align-items: center;
+  justify-content: space-around;
 `;
 
-const total = styled.li`
+const Index = styled.li`
   width: 10%;
 `;
 
-const image = styled.li`
-  width: 10%;
-`;
-
-const name = styled.li`
-  width: 60%;
-`;
-
-const count = styled.li`
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 30%;
 `;
 
-const price = styled.li`
-  width: 30%;
-`;
-
-const eachPrice = styled.li`
-  width: 30%;
-`;
-
-const orderManagement = styled.li`
-  width: 30%;
-`;
-
-const totalPrice = styled.li`
-  width: 20%;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 const Pic = styled.img`
-  height: 10vh;
+  width: 150px;
 `;
 
-export { total, image, name, count, price, eachPrice, orderManagement, Container, Line, ProductList, totalPrice, Pic };
+const Name = styled.li`
+  font-family: "GmarketSans";
+`;
+
+const Quantity = styled.li`
+  width: 10%;
+`;
+
+const Price = styled.li`
+  width: 20%;
+`;
+
+const EachPrice = styled.li`
+  width: 20%;
+`;
+
+const OrderManagement = styled.li`
+  width: 10%;
+`;
+
+export {
+  Container,
+  ProductList,
+  Index,
+  Wrapper,
+  StyledLink,
+  Pic,
+  Name,
+  Quantity,
+  Price,
+  EachPrice,
+  OrderManagement,
+  Line,
+};

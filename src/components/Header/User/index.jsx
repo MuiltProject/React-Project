@@ -3,7 +3,7 @@ import * as S from "./index.styled";
 
 // isLogin : Boolean
 function User({ isLogin }) {
-  // isLogin = true;
+  isLogin = true;
   if (isLogin) {
     return (
       <S.Container>

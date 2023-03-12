@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./index.styled";
-import Row from "./Row";
+import { NavRow, Row } from "./Row";
 import image001 from "./Image/image001.png";
 
 function Cart() {
@@ -9,15 +9,7 @@ function Cart() {
     <S.Container>
       <h3>장바구니</h3>
       <S.BoldLine />
-      <Row
-        total={"전체"}
-        name={"상품명"}
-        count={"수량"}
-        price={"판매가"}
-        eachPrice={"금액 합계"}
-        orderManagement={"주문관리"}
-      />
-
+      <NavRow />
       <Row
         total={"1"}
         image={image001}
@@ -27,49 +19,13 @@ function Cart() {
         eachPrice={"299,000"}
         orderManagement={<button>삭제하기</button>}
       />
-
       <Row
-        total={"2"}
-        name={"발마칸 코트"}
-        count={"3"}
-        price={"231,000"}
-        eachPrice={"693,000"}
-        orderManagement={<button>삭제하기</button>}
-      />
-
-      <Row
-        total={"3"}
-        name={"클래식 블랙"}
-        count={"2"}
-        price={"85,500"}
-        eachPrice={"171,000"}
-        orderManagement={<button>삭제하기</button>}
-      />
-
-      <Row
-        total={"4"}
+        total={"1"}
+        image={image001}
         name={"바이스윙 윈드브레이커"}
-        count={"2"}
-        price={"299,000"}
-        eachPrice={"598,000"}
-        orderManagement={<button>삭제하기</button>}
-      />
-
-      <Row
-        total={"5"}
-        name={"베이식 블레이저"}
         count={"1"}
-        price={"81,900"}
-        eachPrice={"598,000"}
-        orderManagement={<button>삭제하기</button>}
-      />
-
-      <Row
-        total={"6"}
-        name={"YACHT JACKET"}
-        count={"2"}
-        price={"111,300"}
-        eachPrice={"222,600"}
+        price={"299,000"}
+        eachPrice={"299,000"}
         orderManagement={<button>삭제하기</button>}
       />
     </S.Container>
