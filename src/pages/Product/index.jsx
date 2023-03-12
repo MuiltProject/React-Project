@@ -2,7 +2,7 @@ import React from "react";
 import "./index.styled.css";
 import Card from "../../components/Product/Card";
 
-import Json from "../../data/product/data.json";
+import Json from "../../data/Product/data.json";
 import NotFound from "../../components/Product/NotFound";
 
 // 제품의 고유 번호, 대표 이미지, 태그1, 태그2, 제품 이름, 가격
