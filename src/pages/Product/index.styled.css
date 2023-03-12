@@ -1,37 +1,11 @@
-.text {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 7px;
-}
-
-.product-name {
-  text-align: center;
+.Container {
+  display: flex;
+  flex-direction: column;
 }
 
 .TextBox {
   text-align: left;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 18px;
   margin-left: 20px;
-}
-
-.page-container {
-  margin: auto;
-  padding: 32px 0;
-}
-
-.img-container {
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.img-container {
-  width: 250px;
-  margin: 16px;
-  border-radius: 5px;
-}
-
-.img-container img {
-  max-width: 100%;
 }
