@@ -6,15 +6,9 @@ import * as S from "./index.styled";
 function Nav() {
   return (
     <S.Container>
-      <S.TextContainer>
-        <S.StyledLink to={"/product"}>Product</S.StyledLink>
-      </S.TextContainer>
-      <S.TextContainer>
-        <S.StyledLink to={"/outfit"}>Outfit</S.StyledLink>
-      </S.TextContainer>
-      <S.TextContainer>
-        <S.StyledLink to={"/review"}>Review</S.StyledLink>
-      </S.TextContainer>
+      <S.StyledLink to={"/product"}>Product</S.StyledLink>
+      <S.StyledLink to={"/outfit"}>Outfit</S.StyledLink>
+      <S.StyledLink to={"/review"}>Review</S.StyledLink>
     </S.Container>
   );
 }

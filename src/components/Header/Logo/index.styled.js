@@ -1,17 +1,14 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  position: absolute;
-  width: 25vh;
-  width: 15%;
-  height: 100px;
+  width: 20vw;
 `;
 
-const Logo = styled.h1`
+const Header = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0f010d;
 `;
 
-export { Container, Logo };
+export { Container, Header };
