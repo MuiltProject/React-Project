@@ -31,14 +31,14 @@ const Product = () => {
 
   const getCategoryParam = useCallback(async () => {
     const param = params.get("category");
-    if (param !== "") {
+    if (param !== null) {
       setCategory(param);
     }
   }, [params]);
 
   const getTargetParam = useCallback(async () => {
     const param = params.get("target");
-    if (param !== "") {
+    if (param !== null) {
       setTarget(param);
     }
   }, [params]);
