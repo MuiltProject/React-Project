@@ -10,7 +10,7 @@ function Orders({ count, orders }) {
       <h3>주문 / 배송</h3>
       <S.BoldLine />
       <NavRow />
-      {count === 0 ? (
+      {count === 3 ? (
         <NotFound />
       ) : (
         orders.map((order) => {

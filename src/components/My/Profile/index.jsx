@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PasswordForm, EmailForm, PhoneNumberForm } from "./ChangeForm";
-import Output from "./Output";
+import Output from "../Output";
 
 import * as S from "./index.styled";
 

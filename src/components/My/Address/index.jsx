@@ -1,5 +1,7 @@
 import React from "react";
 
+import Output from "../Output";
+
 import * as S from "./index.styled";
 
 function Address({ recipient, zipCode, address }) {
@@ -9,18 +11,9 @@ function Address({ recipient, zipCode, address }) {
       <S.Line />
       <S.Wrapper>
         <S.Section>
-          <S.TextSection>
-            <S.ThinText>수취인</S.ThinText>
-            <S.Text>{recipient}</S.Text>
-          </S.TextSection>
-          <S.TextSection>
-            <S.ThinText>우편번호</S.ThinText>
-            <S.Text>{zipCode}</S.Text>
-          </S.TextSection>
-          <S.TextSection>
-            <S.ThinText>주소</S.ThinText>
-            <S.Text>{address}</S.Text>
-          </S.TextSection>
+          <Output directive={"수취인"} value={recipient} />
+          <Output directive={"우편번호"} value={zipCode} />
+          <Output directive={"주소"} value={address} />
         </S.Section>
       </S.Wrapper>
     </S.Container>
