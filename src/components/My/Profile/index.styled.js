@@ -5,6 +5,21 @@ const Container = styled.div`
   margin-bottom: 5vh;
 `;
 
+const NavWrapper = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+`;
+
+const NavHeader = styled.p`
+  color: gray;
+  cursor: pointer;
+`;
+
+const NavSelectHeader = styled.p`
+  color: black;
+`;
+
 const Line = styled.div`
   background-color: black;
   margin-top: -1.5vh;
@@ -25,7 +40,12 @@ const Wrapper = styled.div`
 const Section = styled.div`
   width: 50%;
   height: 100%;
-  justify-content: center;
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  width: 50%;
+  flex-direction: column;
 `;
 
 const TextSection = styled.div`
@@ -39,4 +59,16 @@ const ThinText = styled.h4`
 `;
 
 const Text = styled.p``;
-export { Container, Line, Wrapper, Section, TextSection, ThinText, Text };
+export {
+  Container,
+  NavWrapper,
+  NavHeader,
+  NavSelectHeader,
+  Line,
+  Wrapper,
+  Section,
+  StyledForm,
+  TextSection,
+  ThinText,
+  Text,
+};
