@@ -7,7 +7,6 @@ import NotFound from "../../components/Product/NotFound";
 import { CategoryNav, TargetNav } from "../../components/FilterNav";
 
 import "./index.styled.css";
-import { CATEGORIES, TARGETS } from "../../constants/category";
 
 // 제품의 고유 번호, 대표 이미지, 태그1, 태그2, 제품 이름, 가격
 
@@ -32,6 +31,8 @@ const Product = () => {
     getData();
   }, [getData]);
 
+  console.log(data);
+
   const handleCategoryClick = useCallback((category) => {
     setCategory(category);
   }, []);
@@ -54,8 +55,8 @@ const Product = () => {
       </div>
       <div className="NavBar">
         <div className="Toggle">
-          <TargetNav categories={CATEGORIES} selectedTarget={target} onClick={handleTargetClick} />
-          <CategoryNav targets={TARGETS} selectedCategory={category} onClick={handleCategoryClick} />
+          <TargetNav selectedTarget={target} onClick={handleTargetClick} />
+          <CategoryNav selectedCategory={category} onClick={handleCategoryClick} />
         </div>
         <div className="Count">
           <p className="Text">{CompleteFilteredData.length} 상품</p>
