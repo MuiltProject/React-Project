@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as S from "./index.styled";
+
 import Total from "../../assets/Category/total.jpg";
 import Bag from "../../assets/Category/bag.jpg";
 import Basic from "../../assets/Category/basic.jpg";

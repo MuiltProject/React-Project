@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 `;
 
 const Pic = styled.img`
+  position: static;
   width: 100%;
   height: 62.5vh;
   filter: brightness(0.9);
@@ -55,6 +56,7 @@ const Text = styled.p`
 `;
 
 const StyledLink = styled(Link)`
+  position: relative;
   width: 25%;
   display: flex;
   align-items: center;
