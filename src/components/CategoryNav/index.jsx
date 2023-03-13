@@ -1,66 +1,57 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 
 import * as S from "./index.styled";
 
-function CategoryNav() {
-  const [filterState, setFilterState] = useState({
-    passingTags: {
-      hats: false,
-      outers: false,
-      tops: false,
-      bags: false,
-      pants: false,
-      shoes: false,
-      basic: false,
-    },
-  });
+const CATEGORIES = [
+  {
+    name: "all",
+    text: "전체",
+  },
+  {
+    name: "hat",
+    text: "모자",
+  },
+  {
+    name: "top",
+    text: "상의",
+  },
+  {
+    name: "outer",
+    text: "아우터",
+  },
+  {
+    name: "bag",
+    text: "가방",
+  },
+  {
+    name: "pant",
+    text: "바지",
+  },
+  {
+    name: "shoes",
+    text: "신발",
+  },
+  {
+    name: "basic",
+    text: "베이직",
+  },
+];
 
-  const handleFilter = (e) => {
-    const category = e.target.id;
-
-    setFilterState({
-      passingTags: { ...filterState.passingTags, [category]: !filterState.passingTags[category] },
-    });
-  };
-
-  const filteredCollect = useCallback(() => {
-    const clicked = [];
-    const now = filterState.passingTags;
-
-    for (let i in now) {
-      if (now[i]) {
-        clicked.push(i);
-      }
-    }
-
-    return clicked;
-  }, [filterState.passingTags]);
-
-  const result = filteredCollect();
-
+function CategoryNav({ selectedCategory, onClick }) {
   return (
     <S.Container>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        모자
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        상의
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        아우터
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        가방
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        바지
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        신발
-      </S.StyledButton>
-      <S.StyledButton variant="outlined" onClick={handleFilter}>
-        베이직
-      </S.StyledButton>
+      {CATEGORIES.map((cate) => {
+        const isSelected = selectedCategory.includes(cate.name);
+        return (
+          <S.StyledButton
+            key={cate.name}
+            variant={isSelected ? "contained" : "outlined"}
+            onClick={() => onClick(cate.name)}
+          >
+            {cate.text}
+          </S.StyledButton>
+        );
+      })}
     </S.Container>
   );
 }
