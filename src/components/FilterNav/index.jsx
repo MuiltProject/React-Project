@@ -1,14 +1,13 @@
 import React from "react";
 
-import { CATEGORIES, TARGETS } from "../../constants/category";
 import { ToggleButton } from "@mui/material";
 
 import * as S from "./index.styled";
 
-function CategoryNav({ selectedCategory, onClick }) {
+function CategoryNav({ categories, selectedCategory, onClick }) {
   return (
     <S.StyledToggleButtonGroup value={selectedCategory}>
-      {CATEGORIES.map((cate) => {
+      {categories.map((cate) => {
         return (
           <ToggleButton
             color={"primary"}
@@ -27,10 +26,10 @@ function CategoryNav({ selectedCategory, onClick }) {
 
 export default CategoryNav;
 
-function TargetNav({ selectedTarget, onClick }) {
+function TargetNav({ targets, selectedTarget, onClick }) {
   return (
     <S.StyledToggleButtonGroup value={selectedTarget}>
-      {TARGETS.map((target) => {
+      {targets.map((target) => {
         return (
           <ToggleButton
             color={"primary"}
