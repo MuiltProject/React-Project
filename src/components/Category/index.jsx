@@ -10,37 +10,37 @@ function Category() {
     <S.Container>
       <S.Header> Shop By Category </S.Header>
       <S.Section>
-        <S.StyledLink to="/example/new">
-          <S.Text>신상품</S.Text>
+        <S.StyledLink to="/product">
+          <S.Text>전체</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="/example/hats">
+        <S.StyledLink to="/product?category=hat">
           <S.Text>모자</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="example/outers">
+        <S.StyledLink to="/product?category=outer">
           <S.Text>아우터</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="example/tops">
+        <S.StyledLink to="/product?category=top">
           <S.Text>상의</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
       </S.Section>
       <S.Section>
-        <S.StyledLink to="example/bags">
+        <S.StyledLink to="/product?category=bag">
           <S.Text>가방</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="example/pants">
+        <S.StyledLink to="/product?category=pant">
           <S.Text>하의</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="example/shoes">
+        <S.StyledLink to="/product?category=shoes">
           <S.Text>신발</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>
-        <S.StyledLink to="example/basic">
+        <S.StyledLink to="/product?category=basic">
           <S.Text>베이직</S.Text>
           <S.Pic src={Pic1}></S.Pic>
         </S.StyledLink>

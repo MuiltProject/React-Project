@@ -11,9 +11,9 @@ function Cards() {
   return (
     <S.Container>
       <S.Wrapper>
-        <Card URL={"/example/women"} pic={Women} category={"Women"} />
-        <Card URL={"/example/mem"} pic={Men} category={"Men"} />
-        <Card URL={"example/kids"} pic={Kids} category={"Kids"} />
+        <Card URL={"/product?target=women"} pic={Women} category={"Women"} />
+        <Card URL={"/product?target=men"} pic={Men} category={"Men"} />
+        <Card URL={"/product?target=kids"} pic={Kids} category={"Kids"} />
       </S.Wrapper>
     </S.Container>
   );
