@@ -14,6 +14,7 @@ const Section = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 `;
@@ -45,11 +46,11 @@ const Text = styled.p`
   align-items: center;
 
   margin-top: 50vh;
-  width: 5vw;
+  width: 7vw;
   height: 4vh;
   z-index: 1;
 
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: black;
   border-radius: 3px;
   background-color: #f8f8f8;

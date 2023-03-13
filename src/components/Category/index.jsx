@@ -2,56 +2,68 @@ import React from "react";
 
 import * as S from "./index.styled";
 
-import Total from "../../assets/Category/total.jpg";
-import Bag from "../../assets/Category/bag.jpg";
-import Basic from "../../assets/Category/basic.jpg";
-import Hat from "../../assets/Category/hat.jpg";
-import Outer from "../../assets/Category/outer.jpg";
-import Pant from "../../assets/Category/pant.jpg";
-import Shoes from "../../assets/Category/shoes.jpg";
-import Top from "../../assets/Category/top.png";
+// TODO: 추후 분리할 예정
+import { Bag, Basic, Hat, Outer, Pant, Shoes, Top, Total } from "../../assets/Category/image";
+
+const MAIN_CATEGORIES = [
+  {
+    text: "전체",
+    img: Total,
+    path: "/product",
+  },
+  {
+    text: "모자",
+    img: Hat,
+    path: "/product?category=hat",
+  },
+  {
+    text: "아우터",
+    img: Outer,
+    path: "/product?category=outer",
+  },
+  {
+    text: "상의",
+    img: Top,
+    path: "/product?category=top",
+  },
+  {
+    text: "가방",
+    img: Bag,
+    path: "/product?category=bag",
+  },
+  {
+    text: "바지",
+    img: Pant,
+    path: "/product?category=pant",
+  },
+  {
+    text: "신발",
+    img: Shoes,
+    path: "/product?category=shoes",
+  },
+  {
+    text: "베이직",
+    img: Basic,
+    path: "/product?category=basic",
+  },
+];
 
 function Category() {
-  // TODO: 이미지 변경 필요
   // 카테고리는 위에서 아래순으로 신상품, 모자, 아우터, 상의, 가방, 하의, 신발, 베이직 순이다.
   return (
     <S.Container>
       <S.Header> Shop By Category </S.Header>
       <S.Section>
-        <S.StyledLink to="/product">
-          <S.Text>전체</S.Text>
-          <S.Pic src={Total}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=hat">
-          <S.Text>모자</S.Text>
-          <S.Pic src={Hat}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=outer">
-          <S.Text>아우터</S.Text>
-          <S.Pic src={Outer}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=top">
-          <S.Text>상의</S.Text>
-          <S.Pic src={Top}></S.Pic>
-        </S.StyledLink>
-      </S.Section>
-      <S.Section>
-        <S.StyledLink to="/product?category=bag">
-          <S.Text>가방</S.Text>
-          <S.Pic src={Bag}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=pant">
-          <S.Text>하의</S.Text>
-          <S.Pic src={Pant}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=shoes">
-          <S.Text>신발</S.Text>
-          <S.Pic src={Shoes}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/product?category=basic">
-          <S.Text>베이직</S.Text>
-          <S.Pic src={Basic}></S.Pic>
-        </S.StyledLink>
+        {MAIN_CATEGORIES.map((category) => {
+          return (
+            <>
+              <S.StyledLink to={category.path}>
+                <S.Text>{category.text}</S.Text>
+                <S.Pic src={category.img}></S.Pic>
+              </S.StyledLink>
+            </>
+          );
+        })}
       </S.Section>
     </S.Container>
   );
