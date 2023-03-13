@@ -7,4 +7,12 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-export { Container };
+const Header = styled.h2`
+  margin-top: 10vh;
+`;
+
+const Icon = styled.p`
+  font-size: 50px;
+`;
+
+export { Container, Header, Icon };
