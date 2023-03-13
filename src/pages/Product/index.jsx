@@ -7,11 +7,13 @@ import NotFound from "../../components/Product/NotFound";
 import { CategoryNav, TargetNav } from "../../components/FilterNav";
 
 import "./index.styled.css";
+import { useSearchParams } from "react-router-dom";
 
 // 제품의 고유 번호, 대표 이미지, 태그1, 태그2, 제품 이름, 가격
 
 const Product = () => {
   const [data, setData] = useState([]);
+  const [params, setParams] = useSearchParams();
   const [category, setCategory] = useState("all");
   const [target, setTarget] = useState("all");
 
@@ -27,9 +29,25 @@ const Product = () => {
       });
   }, []);
 
+  const getCategoryParam = useCallback(async () => {
+    const param = params.get("category");
+    if (param !== "") {
+      setCategory(param);
+    }
+  }, [params]);
+
+  const getTargetParam = useCallback(async () => {
+    const param = params.get("target");
+    if (param !== "") {
+      setTarget(param);
+    }
+  }, [params]);
+
   useEffect(() => {
+    getTargetParam();
+    getCategoryParam();
     getData();
-  }, [getData]);
+  }, [getData, getTargetParam, getCategoryParam]);
 
   console.log(data);
 
