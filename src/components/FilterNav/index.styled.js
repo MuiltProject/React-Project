@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { ToggleButtonGroup } from "@mui/material";
 
 const Container = styled.div``;
 
-const StyledButton = styled(Button)`
+const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
   margin: 0 5px;
 `;
 
-export { Container, StyledButton };
+export { Container, StyledToggleButtonGroup };

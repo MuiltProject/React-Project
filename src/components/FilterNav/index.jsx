@@ -1,44 +1,49 @@
 import React from "react";
 
-import * as S from "./index.styled";
-
 import { CATEGORIES, TARGETS } from "../../constants/category";
+import { ToggleButton } from "@mui/material";
+
+import * as S from "./index.styled";
 
 function CategoryNav({ selectedCategory, onClick }) {
   return (
-    <S.Container>
+    <S.StyledToggleButtonGroup value={selectedCategory}>
       {CATEGORIES.map((cate) => {
-        const isSelected = selectedCategory === cate.name;
         return (
-          <S.StyledButton
+          <ToggleButton
+            color={"primary"}
             key={cate.name}
-            variant={isSelected ? "contained" : "outlined"}
+            value={cate.name}
             onClick={() => onClick(cate.name)}
+            aria-label="Platform"
           >
             {cate.text}
-          </S.StyledButton>
+          </ToggleButton>
         );
       })}
-    </S.Container>
+    </S.StyledToggleButtonGroup>
   );
 }
 
+export default CategoryNav;
+
 function TargetNav({ selectedTarget, onClick }) {
   return (
-    <S.Container>
+    <S.StyledToggleButtonGroup value={selectedTarget}>
       {TARGETS.map((target) => {
-        const isSelected = selectedTarget === target.name;
         return (
-          <S.StyledButton
+          <ToggleButton
+            color={"primary"}
             key={target.name}
-            variant={isSelected ? "contained" : "outlined"}
+            value={target.name}
             onClick={() => onClick(target.name)}
+            aria-label="Platform"
           >
             {target.text}
-          </S.StyledButton>
+          </ToggleButton>
         );
       })}
-    </S.Container>
+    </S.StyledToggleButtonGroup>
   );
 }
 

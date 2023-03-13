@@ -39,16 +39,16 @@ const TARGETS = [
     text: "전체",
   },
   {
-    name: "kids",
-    text: "키즈",
-  },
-  {
     name: "men",
     text: "남성",
   },
   {
     name: "women",
     text: "여성",
+  },
+  {
+    name: "kids",
+    text: "키즈",
   },
 ];
 export { CATEGORIES, TARGETS };

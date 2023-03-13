@@ -4,7 +4,7 @@
             "id": 1,
             "image": "img/03.jpg",
             "target": "women",
-            "category": "tops",
+            "category": "top",
             "name": "데님 자켓",
             "price": 100000
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "image": "img/04.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "pant",
             "name": "청바지",
             "price": 96000
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "image": "img/05.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "pant",
             "name": "청바지",
             "price": 96000
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "image": "img/06.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "pant",
             "name": "청바지",
             "price": 96000
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "image": "img/07.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "pant",
             "name": "청바지",
             "price": 96000
         },
@@ -44,7 +44,7 @@
             "id": 6,
             "image": "img/08.jpg",
             "target": "men",
-            "category": "pants",
+            "category": "bag",
             "name": "청바지",
             "price": 96000
         },
@@ -52,7 +52,7 @@
             "id": 7,
             "image": "img/09.jpg",
             "target": "kids",
-            "category": "pants",
+            "category": "shoes",
             "name": "청바지",
             "price": 96000
         },
@@ -60,7 +60,7 @@
             "id": 8,
             "image": "img/10.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "pant",
             "name": "청바지",
             "price": 96000
         },
@@ -68,16 +68,16 @@
             "id": 9,
             "image": "img/11.jpg",
             "target": "women",
-            "category": "pants",
+            "category": "basic",
             "name": "청바지",
             "price": 96000
         },
         {
             "id": 10,
             "image": "img/12.jpg",
-            "target": "women",
-            "category": "pants",
-            "name": "청바지",
+            "target": "men",
+            "category": "pant",
+            "name": "혼성 바지",
             "price": 96000
         }
     ]
