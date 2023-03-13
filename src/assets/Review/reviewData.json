@@ -5,181 +5,181 @@
         "product": "상품1",
         "content": "리뷰내용1",
         "account": "작성자1",
-        "image": "./ReviewTest.jpg"
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 2,
         "product": "상품2",
         "content": "리뷰내용2",
         "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 3,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품3",
+        "content": "리뷰내용3",
+        "account": "작성자3",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 4,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품4",
+        "content": "리뷰내용4",
+        "account": "작성자4",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 5,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품5",
+        "content": "리뷰내용5",
+        "account": "작성자5",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 6,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품6",
+        "content": "리뷰내용6",
+        "account": "작성자6",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 7,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품7",
+        "content": "리뷰내용7",
+        "account": "작성자7",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 8,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품8",
+        "content": "리뷰내용8",
+        "account": "작성자8",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 9,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품9",
+        "content": "리뷰내용9",
+        "account": "작성자9",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 10,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품10",
+        "content": "리뷰내용10",
+        "account": "작성자10",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 11,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품11",
+        "content": "리뷰내용11",
+        "account": "작성자11",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 12,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품12",
+        "content": "리뷰내용12",
+        "account": "작성자12",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 13,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품13",
+        "content": "리뷰내용13",
+        "account": "작성자13",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 14,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품14",
+        "content": "리뷰내용14",
+        "account": "작성자14",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 15,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품15",
+        "content": "리뷰내용15",
+        "account": "작성자15",
+        "image": "/img/ReviewTest.jpg"
       }, {
         "id": 16,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품16",
+        "content": "리뷰내용16",
+        "account": "작성자16",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 17,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품17",
+        "content": "리뷰내용17",
+        "account": "작성자17",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 18,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품18",
+        "content": "리뷰내용18",
+        "account": "작성자18",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 19,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품19",
+        "content": "리뷰내용19",
+        "account": "작성자19",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 20,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품20",
+        "content": "리뷰내용20",
+        "account": "작성자20",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 21,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품21",
+        "content": "리뷰내용21",
+        "account": "작성자21",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 22,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품22",
+        "content": "리뷰내용22",
+        "account": "작성자22",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 23,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품23",
+        "content": "리뷰내용23",
+        "account": "작성자23",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 24,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품24",
+        "content": "리뷰내용24",
+        "account": "작성자24",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 25,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품25",
+        "content": "리뷰내용25",
+        "account": "작성자25",
+        "image": "/img/ReviewTest.jpg"
       },
       {
         "id": 26,
-        "product": "상품2",
-        "content": "리뷰내용2",
-        "account": "작성자2",
-        "image": "./ReviewTest.jpg"
+        "product": "상품26",
+        "content": "리뷰내용26",
+        "account": "작성자26",
+        "image": "/img/ReviewTest.jpg"
       }
 
 

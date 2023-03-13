@@ -47,10 +47,12 @@ const Review_list_item_BuyItem = styled.span`
   color : #807675;
   cursor:pointer;
 `;
+
 // const Review_list_item_ContentTitle = styled.span`
 //   font-size : 16px;
 //   margin-bottom : 10px;
 // `;
+
 const Review_list_item_ContentWrite = styled.span`
   font-size : 14px;
   cursor:pointer;
