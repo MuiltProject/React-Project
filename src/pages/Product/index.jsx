@@ -4,7 +4,7 @@ import axios from "axios";
 import Card from "../../components/Product/Card";
 import Json from "../../data/product/data.json";
 import NotFound from "../../components/Product/NotFound";
-import CategoryNav from "../../components/CategoryNav";
+import { CategoryNav, TargetNav } from "../../components/FilterNav";
 
 import "./index.styled.css";
 
@@ -12,6 +12,8 @@ import "./index.styled.css";
 
 const Product = () => {
   const [data, setData] = useState([]);
+  const [category, setCategory] = useState("all");
+  const [target, setTarget] = useState("all");
 
   // TODO: API 서버 구축후 해당 URL로 변경
   const getData = useCallback(async () => {
@@ -29,29 +31,34 @@ const Product = () => {
     getData();
   }, [getData]);
 
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
   const handleCategoryClick = useCallback((category) => {
-    setSelectedCategory(category);
+    setCategory(category);
   }, []);
 
-  // TODO: 추후 Json을 Data로 변경
-  const filteredData = selectedCategory.includes("all")
-    ? Json.products
-    : Json.products.filter((product) => product.category.includes(selectedCategory));
+  const handleTargetClick = useCallback((target) => {
+    setTarget(target);
+  }, []);
+
+  // TODO: 추후 Json.products을 Data로 변경
+  const filteredData =
+    category === "all" ? Json.products : Json.products.filter((product) => product.category === category);
+
+  const CompleteFilteredData =
+    target === "all" ? filteredData : filteredData.filter((product) => product.target === target);
 
   return (
     <div className="Container">
       <div className="TextBox">
         <h1>Products</h1>
       </div>
-      <p className="Text">{filteredData.length} 상품</p>
-      <CategoryNav selectedCategory={selectedCategory} onClick={handleCategoryClick} />
+      <p className="Text">{CompleteFilteredData.length} 상품</p>
+      <CategoryNav selectedCategory={category} onClick={handleCategoryClick} />
+      <TargetNav selectedTarget={target} onClick={handleTargetClick} />
       <div className="Wrapper">
-        {filteredData.length === 0 ? (
+        {CompleteFilteredData.length === 0 ? (
           <NotFound />
         ) : (
-          filteredData.map((product) => {
+          CompleteFilteredData.map((product) => {
             return <Card key={product.id} product={product} />;
           })
         )}

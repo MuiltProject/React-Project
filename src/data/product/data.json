@@ -43,7 +43,7 @@
         {
             "id": 6,
             "image": "img/08.jpg",
-            "target": "women",
+            "target": "men",
             "category": "pants",
             "name": "청바지",
             "price": 96000
@@ -51,7 +51,7 @@
         {
             "id": 7,
             "image": "img/09.jpg",
-            "target": "women",
+            "target": "kids",
             "category": "pants",
             "name": "청바지",
             "price": 96000
