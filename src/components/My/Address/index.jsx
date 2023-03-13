@@ -1,6 +1,7 @@
 import React from "react";
 
 import Output from "../Output";
+import Form from "./ChangeForm";
 
 import * as S from "./index.styled";
 
@@ -14,6 +15,9 @@ function Address({ recipient, zipCode, address }) {
           <Output directive={"수취인"} value={recipient} />
           <Output directive={"우편번호"} value={zipCode} />
           <Output directive={"주소"} value={address} />
+        </S.Section>
+        <S.Section>
+          <Form />
         </S.Section>
       </S.Wrapper>
     </S.Container>
