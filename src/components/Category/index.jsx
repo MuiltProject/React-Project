@@ -49,7 +49,7 @@ const MAIN_CATEGORIES = [
 ];
 
 function Category() {
-  // 카테고리는 위에서 아래순으로 신상품, 모자, 아우터, 상의, 가방, 하의, 신발, 베이직 순이다.
+  // 전체, 모자, 아우터, 상의, 가방, 하의, 신발, 베이직
   return (
     <S.Container>
       <S.Header> Shop By Category </S.Header>
