@@ -20,4 +20,15 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export { Container, StyledLink };
+const Wrapper = styled.div`
+  background-color: #e5cdce;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  opacity: 0.66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export { Container, Wrapper, StyledLink };
