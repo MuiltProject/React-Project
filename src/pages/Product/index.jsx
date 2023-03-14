@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 import Card from "../../components/Product/Card";
-import Json from "../../data/Product/data.json";
-
-import NotFound from "../../components/Product/NotFound";
 import { CategoryNav, TargetNav } from "../../components/FilterNav";
+import NotFound from "../../components/Product/NotFound";
 
 import "./index.styled.css";
-import { useSearchParams } from "react-router-dom";
+
+import Json from "../../data/Product/data.json";
 
 // 제품의 고유 번호, 대표 이미지, 태그1, 태그2, 제품 이름, 가격
 
