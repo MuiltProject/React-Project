@@ -2,21 +2,21 @@ import React from "react";
 
 import * as S from "./index.styled";
 
-function Row({ date, orderId, info, option, price, status, prodId }) {
+function Row({ order }) {
   return (
     <>
       <S.ProductList>
         <S.OrderInfo>
-          {date}/{orderId}
+          {order.date}/{order.id}
         </S.OrderInfo>
         <S.OrderSummary>
-          <S.ProdLink to={`/details/${prodId}`} target={"_blank"}>
-            {info}
+          <S.ProdLink to={`/details/${order.productId}`} target={"_blank"}>
+            {order.productInfo}
           </S.ProdLink>
-          /{option}
+          /{order.productOption}
         </S.OrderSummary>
-        <S.OrderPrice>{price}</S.OrderPrice>
-        <S.OrderStatus>{status}</S.OrderStatus>
+        <S.OrderPrice>{order.price}</S.OrderPrice>
+        <S.OrderStatus>{order.status}</S.OrderStatus>
       </S.ProductList>
       <S.Line />
     </>

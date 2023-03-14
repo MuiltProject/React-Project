@@ -14,6 +14,7 @@ const Section = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 `;
@@ -29,6 +30,7 @@ const Wrapper = styled.div`
 `;
 
 const Pic = styled.img`
+  position: static;
   width: 100%;
   height: 62.5vh;
   filter: brightness(0.9);
@@ -44,17 +46,18 @@ const Text = styled.p`
   align-items: center;
 
   margin-top: 50vh;
-  width: 5vw;
+  width: 7vw;
   height: 4vh;
   z-index: 1;
 
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: black;
   border-radius: 3px;
   background-color: #f8f8f8;
 `;
 
 const StyledLink = styled(Link)`
+  position: relative;
   width: 25%;
   display: flex;
   align-items: center;

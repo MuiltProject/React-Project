@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  position: absolute;
+  // position: absolute;
 
   width: 100%;
   height: 250px;
@@ -14,10 +14,10 @@ const Container = styled.div`
 
 const Content = styled.div`
   float: left;
-  width: 20%;
+  width: 22.5%;
   height: 250px;
-
-  padding-left: 5%;
+  padding-top: 3vh;
+  padding-left: 2.4%;
 `;
 
 const Text = styled.p`
