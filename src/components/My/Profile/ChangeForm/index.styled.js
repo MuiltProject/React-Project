@@ -21,4 +21,9 @@ const ThinText = styled.h4`
 
 const Text = styled.p``;
 
-export { Container, StyledForm, TextSection, ThinText, Text };
+const Warning = styled.span`
+  color: red;
+  font-size: 6px;
+`;
+
+export { Container, StyledForm, TextSection, ThinText, Text, Warning };
