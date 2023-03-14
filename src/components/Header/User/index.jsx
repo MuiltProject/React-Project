@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./index.styled";
 
+import Json from "../../../data/Header/data.json";
+
 // isLogin : Boolean
 function User({ isLogin }) {
   isLogin = true;
@@ -34,7 +36,7 @@ function User({ isLogin }) {
           <S.Wrapper>
             {/* TODO: 추후 배열형태가 아닌 객체 형태로 들어오므로 수정 필요 */}
             {/* <span>{data[0].cartCount}</span> */}
-            <span>1</span>
+            <span>{Json.cartCount}</span>
           </S.Wrapper>
         </S.StyledLink>
         <S.StyledLink to={"/my"}>MyPage</S.StyledLink>
