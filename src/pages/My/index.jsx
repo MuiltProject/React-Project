@@ -1,12 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
+import axios from "axios";
 
 import Profile from "../../components/My/Profile";
 import Orders from "../../components/My/Orders";
-import * as S from "./index.styled";
 import Address from "../../components/My/Address";
 
+import * as S from "./index.styled";
 import Json from "../../data/MyPage/data.json";
-import axios from "axios";
+
+import { API_PATH } from "../../constants/path";
 
 function My() {
   const [data, setData] = useState({});
@@ -14,7 +16,7 @@ function My() {
 
   const getData = useCallback(async () => {
     await axios
-      .get(`http://localhost:4000/my`)
+      .get(API_PATH.MY.BASE)
       .then((response) => {
         setData(response.data);
       })

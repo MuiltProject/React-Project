@@ -8,6 +8,7 @@ import NotFound from "../../components/Product/NotFound";
 
 import "./index.styled.css";
 
+import { API_PATH } from "../../constants/path";
 import Json from "../../data/Product/data.json";
 
 // 제품의 고유 번호, 대표 이미지, 태그1, 태그2, 제품 이름, 가격
@@ -21,7 +22,7 @@ const Product = () => {
   // TODO: API 서버 구축후 해당 URL로 변경
   const getData = useCallback(async () => {
     await axios
-      .get(`http://localhost:4000/products`)
+      .get(API_PATH.PRODUCT)
       .then((response) => {
         setData(response.data);
       })
