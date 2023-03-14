@@ -11,10 +11,4 @@ const BoldLine = styled.div`
   height: 2px;
 `;
 
-const Line = styled.div`
-  background-color: black;
-  width: 70vw;
-  height: 1px;
-`;
-
-export { Container, BoldLine, Line };
+export { Container, BoldLine };
