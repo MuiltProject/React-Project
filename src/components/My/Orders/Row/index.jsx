@@ -10,10 +10,10 @@ function Row({ order }) {
           {order.date}/{order.id}
         </S.OrderInfo>
         <S.OrderSummary>
-          <S.ProdLink to={`/details/${order.productId}`} target={"_blank"}>
-            {order.productInfo}
+          <S.ProdLink to={`/details/${order.product_id}`} target={"_blank"}>
+            {order.product_info}
           </S.ProdLink>
-          /{order.productOption}
+          /{order.product_option}
         </S.OrderSummary>
         <S.OrderPrice>{order.price}</S.OrderPrice>
         <S.OrderStatus>{order.status}</S.OrderStatus>

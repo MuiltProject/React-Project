@@ -3,7 +3,7 @@
     "carts": [
         {
             "id": 1,
-            "productId": 1,
+            "product_id": 1,
             "image": "img/03.jpg",
             "name": "데님 자켓",
             "quantity": 1,
@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "productId": 2,
+            "product_id": 2,
             "image": "img/04.jpg",
             "name": "청바지",
             "quantity": 2,
@@ -19,7 +19,7 @@
         },
         {
             "id": 3,
-            "productId": 3,
+            "product_id": 3,
             "image": "img/05.jpg",
             "name": "가죽 자켓",
             "quantity": 1,

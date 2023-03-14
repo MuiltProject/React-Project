@@ -36,7 +36,7 @@ function User({ isLogin }) {
           <S.Wrapper>
             {/* TODO: 추후 배열형태가 아닌 객체 형태로 들어오므로 수정 필요 */}
             {/* <span>{data[0].cartCount}</span> */}
-            <span>{Json.cartCount}</span>
+            <span>{Json.cart_count}</span>
           </S.Wrapper>
         </S.StyledLink>
         <S.StyledLink to={"/my"}>MyPage</S.StyledLink>
