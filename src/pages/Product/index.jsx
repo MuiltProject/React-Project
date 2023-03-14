@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
 import Card from "../../components/Product/Card";
-import Json from "../../data/product/data.json";
+import Json from "../../data/Product/data.json";
 
 import NotFound from "../../components/Product/NotFound";
 import { CategoryNav, TargetNav } from "../../components/FilterNav";
