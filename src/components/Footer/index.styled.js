@@ -14,10 +14,10 @@ const Container = styled.div`
 
 const Content = styled.div`
   float: left;
-  width: 25%;
+  width: 22.5%;
   height: 250px;
   padding-top: 3vh;
-  padding-left: 2vw;
+  padding-left: 2.4%;
 `;
 
 const Text = styled.p`
