@@ -7,9 +7,9 @@ import * as S from "./index.styled";
 import { API_PATH } from "../../../../constants/path";
 
 function PasswordForm() {
-  const [nowPassword, setNowPassword] = useState({});
-  const [newPassword, setNewPassword] = useState({});
-  const [validatePassword, setValidatePassword] = useState({});
+  const [nowPassword, setNowPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [validatePassword, setValidatePassword] = useState("");
 
   const getNowPassword = (e) => {
     setNowPassword(e.target.value);
