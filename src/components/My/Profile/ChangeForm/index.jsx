@@ -38,8 +38,8 @@ function PasswordForm() {
     return MEMBER_RULE.PASSWORD.MIN_LENGTH <= password.length && password.length <= MEMBER_RULE.PASSWORD.MAX_LENGTH;
   };
 
-  const equalsNewPassword = () => {
-    return newPassword === validatePassword;
+  const equalsPassword = (pw1, pw2) => {
+    return pw1 === pw2;
   };
 
   const changePassword = async () => {
@@ -78,7 +78,9 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
-        {!validatePasswordByLength(nowPassword) && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD}</S.Warning>}
+        {!validatePasswordByLength(nowPassword) && (
+          <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD.LENGTH}</S.Warning>
+        )}
         <TextField
           type={"password"}
           id="newPassword"
@@ -87,7 +89,12 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
-        {!validatePasswordByLength(newPassword) && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD}</S.Warning>}
+        {!validatePasswordByLength(newPassword) && (
+          <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD.LENGTH}</S.Warning>
+        )}
+        {equalsPassword(nowPassword, newPassword) && (
+          <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD.CHANGE}</S.Warning>
+        )}
         <TextField
           type={"password"}
           id="validatePassword"
@@ -96,11 +103,14 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
-        {!equalsNewPassword() && <S.Warning>{CLIENT_ERROR_MESSAGE.CHANGE.INVALID_CONFIRM_PASSWORD}</S.Warning>}
+        {!equalsPassword(newPassword, validatePassword) && (
+          <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD.CONFIRM}</S.Warning>
+        )}
       </S.StyledForm>
-      {equalsNewPassword() &&
-      hasNowPassword() &&
+      {hasNowPassword() &&
       hasNewPassword() &&
+      !equalsPassword(nowPassword, newPassword) &&
+      equalsPassword(newPassword, validatePassword) &&
       validatePasswordByLength(nowPassword) &&
       validatePasswordByLength(newPassword) ? (
         <Button variant="outlined" onClick={changePassword}>
