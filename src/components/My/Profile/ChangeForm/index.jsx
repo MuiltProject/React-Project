@@ -70,6 +70,7 @@ function PasswordForm() {
           id="nowPassword"
           onChange={getNowPassword}
           label="현재 비밀번호"
+          inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
         <TextField
@@ -77,6 +78,7 @@ function PasswordForm() {
           id="newPassword"
           onChange={getNewPassword}
           label="새 비밀번호"
+          inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
         <TextField
@@ -84,6 +86,7 @@ function PasswordForm() {
           id="validatePassword"
           onChange={getValidatePassword}
           label="새 비밀번호 재입력"
+          inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
         {!equalsNewPassword() && <S.Warning>비밀번호가 동일하지 않습니다.</S.Warning>}
