@@ -188,6 +188,13 @@ function PhoneNumberForm({ nowPhoneNumber }) {
     return PHONE_NUMBER_REGEX.test(phoneNumber);
   };
 
+  const validatePhoneNumberByLength = () => {
+    return (
+      MEMBER_RULE.PHONE_NUMBER.MIN_LENGTH <= phoneNumber.length &&
+      phoneNumber.length <= MEMBER_RULE.PHONE_NUMBER.MAX_LENGTH
+    );
+  };
+
   const changePhoneNumber = async () => {
     const formData = new FormData();
 
@@ -223,7 +230,10 @@ function PhoneNumberForm({ nowPhoneNumber }) {
           variant="standard"
           inputProps={{ maxLength: MEMBER_RULE.PHONE_NUMBER.MAX_LENGTH }}
         />
-        {!validatePhoneNumber() && hasPhoneNumber() && <S.Warning>올바르지 않은 전화번호 형식입니다.</S.Warning>}
+        {!validatePhoneNumber() && hasPhoneNumber() && (
+          <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PHONE_NUMBER.BASE}</S.Warning>
+        )}
+        {!validatePhoneNumberByLength() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PHONE_NUMBER.LENGTH}</S.Warning>}
       </S.StyledForm>
       {hasPhoneNumber() && validatePhoneNumber() ? (
         <Button variant="outlined" onClick={changePhoneNumber}>
