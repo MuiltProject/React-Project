@@ -47,6 +47,7 @@ function PasswordForm() {
     // formData.append("now_password", nowPassword);
     // formData.append("new_password", newPassword);
     // TODO: password로 변경하기
+    // TODO: user_id도 포함해야한다.
     formData.append("email", nowPassword);
     formData.append("pw", newPassword);
 
@@ -147,6 +148,7 @@ function EmailForm({ nowEmail }) {
   const changeEmail = async () => {
     const formData = new FormData();
 
+    // TODO: user_id도 포함해야한다.
     formData.append("email", email);
 
     await axios({
@@ -217,6 +219,7 @@ function PhoneNumberForm({ nowPhoneNumber }) {
   const changePhoneNumber = async () => {
     const formData = new FormData();
 
+    // TODO: user_id도 포함해야한다.
     formData.append("phone_number", phoneNumber);
 
     await axios({
