@@ -24,6 +24,18 @@ function PasswordForm() {
     setValidatePassword(e.target.value);
   };
 
+  const hasNowPassword = () => {
+    return nowPassword !== "";
+  };
+
+  const hasNewPassword = () => {
+    return newPassword !== "";
+  };
+
+  const equalsNewPassword = () => {
+    return newPassword === validatePassword;
+  };
+
   const changePassword = async () => {
     const formData = new FormData();
     // formData.append("now_password", nowPassword);
@@ -73,9 +85,9 @@ function PasswordForm() {
           label="새 비밀번호 재입력"
           variant="standard"
         />
-        {newPassword !== validatePassword && <S.Warning>비밀번호가 동일하지 않습니다.</S.Warning>}
+        {!equalsNewPassword() && <S.Warning>비밀번호가 동일하지 않습니다.</S.Warning>}
       </S.StyledForm>
-      {newPassword === validatePassword ? (
+      {equalsNewPassword() && hasNowPassword() && hasNewPassword() ? (
         <Button variant="outlined" onClick={changePassword}>
           변경
         </Button>
