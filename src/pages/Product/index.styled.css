@@ -1,11 +1,28 @@
 .Container {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
 .TextBox {
-  text-align: center;
+  text-align: left;
   margin-top: 5vh;
+}
+
+.NavBar {
+  display: flex;
+  margin-top: 7vh;
+  flex-direction: row;
+  width: 75vw;
+  height: 100px;
+}
+
+.Toggle {
+  width: 80%;
+}
+
+.Count {
+  width: 20%;
 }
 
 .Wrapper {
@@ -15,6 +32,6 @@
 }
 
 .Text {
-  text-align: right;
-  margin-right: 10vw;
+  display: table-cell;
+  float: right;
 }
