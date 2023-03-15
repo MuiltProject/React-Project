@@ -15,8 +15,8 @@ align-items: center;
 
 const Review_Modal_Body = styled.div`
   position: absolute;
-  width: 60%; //1000px 
-  height: 60%; // 600px 
+  width: 900px ;
+  height: 550px ;
   padding: 40px;
   text-align: center;
   background-color: rgb(255, 255, 255);
@@ -55,7 +55,6 @@ const Review_Modal_Body_section2 = styled.div`
   align-items : center;
   width : 50%;
   height : 100%;  
-  user-select: none;
   flex-direction: column;
   // border : 1px solid blue;
   }

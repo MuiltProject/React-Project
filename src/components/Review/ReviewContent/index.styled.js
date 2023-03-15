@@ -7,7 +7,7 @@ const Review_list_item = styled.div`
   justify-content: left;
   align-items : center;
   width: 100%;
-  height : 5%;
+  max-height : 150px;
   flex :1;
 `;
 
