@@ -1,24 +1,13 @@
 import React, { useState } from "react";
-import c1 from "../../../assets/Details/c1.jpg";
-import c2 from "../../../assets/Details/c2.jpg";
-import c3 from "../../../assets/Details/c3.jpg";
-import c4 from "../../../assets/Details/c4.jpg";
-import c5 from "../../../assets/Details/c5.jpg";
-import styled from "@emotion/styled";
+import c1 from "../../../../assets/Details/c1.jpg";
+import c2 from "../../../../assets/Details/c2.jpg";
+import c3 from "../../../../assets/Details/c3.jpg";
+import c4 from "../../../../assets/Details/c4.jpg";
+import c5 from "../../../../assets/Details/c5.jpg";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
+import * as S from "./index.styled";
 
-const Button = styled.button`
-  background-color: white;
-  color: black;
-  font-size: 50px;
-  border: none;
-  cursor: pointer;
-`;
-
-const TextStyle = {
-  textAlign: "right",
-};
 
 function RelatedProduct() {
   const data = [
@@ -32,7 +21,6 @@ function RelatedProduct() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numVisible /*, setNumVisible*/] = useState(3);
 
-  // 왼쪽 화살표 클릭 시 왼쪽 이미지 show
   const handlePrevClick = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -40,7 +28,7 @@ function RelatedProduct() {
       setCurrentIndex(data.length - numVisible);
     }
   };
-  // 오른쪽 화살표 클릭 시 오른쪽 이미지 show
+
   const handleNextClick = () => {
     if (currentIndex + numVisible < data.length) {
       setCurrentIndex(currentIndex + 1);
@@ -50,30 +38,28 @@ function RelatedProduct() {
   };
 
   const visibleData = data.slice(currentIndex, currentIndex + numVisible);
-  // 연관상품을 carousel로 구현: 이미지 하단에 상품 이름과 가격 표시
+  
   return (
-    <div className="Related">
-      <div style={{ textAlign: "center" }}>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button onClick={handlePrevClick}>
+    
+        <S.Container >
+          <S.Button onClick={handlePrevClick}>
             <BsChevronLeft />
-          </Button>
+          </S.Button>
           {visibleData.map((item, index) => (
-            <div key={index} style={{ margin: "0 30px" }}>
-              <img src={item.image} alt="carousel-thumbnail" style={{ width: "200px", height: "250px" }} />
-              <p style={TextStyle}>
+            <S.ImageContainer key={index}>
+              <S.Image src={item.image} alt="carousel-thumbnail" />
+              <S.Text>
                 {item.product}
                 <br />
                 {item.price}
-              </p>
-            </div>
+              </S.Text>
+            </S.ImageContainer>
           ))}
-          <Button onClick={handleNextClick}>
+          <S.Button onClick={handleNextClick}>
             <BsChevronRight />
-          </Button>
-        </div>
-      </div>
-    </div>
+          </S.Button>
+      </S.Container>
+    
   );
 }
 

@@ -1,13 +1,10 @@
 import styled from "@emotion/styled";
 
-const Container = styled.div``;
-
 const Button = styled.button`
   background-color: white;
   color: black;
   font-size: 15px;
   padding: 10px;
-
   margin: 0 20px;
   cursor: pointer;
 `;
@@ -21,4 +18,4 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-export { Container, Button, CloseButton };
+export { Button, CloseButton };
