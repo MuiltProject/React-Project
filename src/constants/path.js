@@ -13,13 +13,15 @@ const BROWSER_PATH = {
 // TODO: 추후 스프링과 연동하기
 const API_PATH = {
   MAIN: {
-    HEADER: "http:localhost:4000/my",
+    HEADER: "http:localhost:4000/my", // GET API
   },
-  PRODUCT: "http://localhost:4000/products",
+  CART: "http:localhost:4000/cart", // GET API
   MY: {
-    BASE: "http://localhost:4000/my",
+    BASE: "http://localhost:4000/my", // GET API
+    CHANGE_ADDRESS: "https://reqres.in/api/users", // POST API
     CHANGE_PASSWORD: "https://reqres.in/api/users", // POST API
   },
+  PRODUCT: "http://localhost:4000/products", // GET
 };
 
 export { BROWSER_PATH, API_PATH };
