@@ -210,6 +210,10 @@ function PhoneNumberForm({ nowPhoneNumber }) {
     );
   };
 
+  const equalsPhoneNumber = () => {
+    return nowPhoneNumber === phoneNumber;
+  };
+
   const changePhoneNumber = async () => {
     const formData = new FormData();
 
@@ -249,8 +253,9 @@ function PhoneNumberForm({ nowPhoneNumber }) {
           <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PHONE_NUMBER.BASE}</S.Warning>
         )}
         {!validatePhoneNumberByLength() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PHONE_NUMBER.LENGTH}</S.Warning>}
+        {equalsPhoneNumber() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PHONE_NUMBER.CHANGE}</S.Warning>}
       </S.StyledForm>
-      {hasPhoneNumber() && validatePhoneNumber() ? (
+      {hasPhoneNumber() && validatePhoneNumber() && !equalsPhoneNumber() ? (
         <Button variant="outlined" onClick={changePhoneNumber}>
           변경
         </Button>
@@ -262,4 +267,5 @@ function PhoneNumberForm({ nowPhoneNumber }) {
     </S.Container>
   );
 }
+
 export { PasswordForm, EmailForm, PhoneNumberForm };

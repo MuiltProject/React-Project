@@ -13,6 +13,7 @@ const CLIENT_ERROR_MESSAGE = {
   INVALID_PHONE_NUMBER: {
     BASE: "올바르지 않은 전화번호 형식입니다.",
     LENGTH: `전화번호는 최소${MEMBER_RULE.PHONE_NUMBER.MIN_LENGTH}자에서 ${MEMBER_RULE.PHONE_NUMBER.MAX_LENGTH}자 사이여야 합니다.`,
+    CHANGE: "현재 전화번호와 새로운 전화번호가 일치하면 안됩니다.",
   },
 };
 
