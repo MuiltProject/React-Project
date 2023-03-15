@@ -17,7 +17,7 @@ function Address({ recipient, zipCode, address }) {
           <Output directive={"주소"} value={address} />
         </S.Section>
         <S.Section>
-          <Form />
+          <Form nowAddress={address} nowRecipient={recipient} nowZipCode={zipCode} />
         </S.Section>
       </S.Wrapper>
     </S.Container>

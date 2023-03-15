@@ -17,7 +17,7 @@ const MEMBER_RULE = {
       MAX_LENGTH: 20,
     },
     ZIP_CODE: {
-      MAX_LENGTH: 5,
+      LENGTH: 5,
     },
   },
 };
