@@ -1,20 +1,41 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import axios from "axios";
 
 import Profile from "../../components/My/Profile";
 import Orders from "../../components/My/Orders";
-import * as S from "./index.styled";
 import Address from "../../components/My/Address";
 
+import * as S from "./index.styled";
 import Json from "../../data/MyPage/data.json";
 
+import { API_PATH } from "../../constants/path";
+
 function My() {
+  const [data, setData] = useState({});
   const [option, setOption] = useState(0);
+
+  const getData = useCallback(async () => {
+    await axios
+      .get(API_PATH.MY.BASE)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    getData();
+  }, [getData]);
+
+  console.log(data);
 
   const changeOption = (number) => {
     setOption(number);
   };
 
-  // TODO: 추후 API 을 가져오는 로직 필요함
+  // TODO: 추후 Json -> data 로 변경
   return (
     <S.Container>
       {option === 0 && (

@@ -1,22 +1,23 @@
 import { Cart, Details, Join, Login, Main, My, NotFound, Outfit, Product, Review } from "../pages/index";
 
 import React from "react";
+import { BROWSER_PATH } from "../constants/path";
 import { Route, Routes as BrowserRoutes } from "react-router-dom";
 
 function Routes() {
   return (
     <BrowserRoutes>
-      <Route path={"/"} element={<Main />} />
-      <Route path={"/cart"} element={<Cart />} />
-      <Route path={"/details"}>
+      <Route path={BROWSER_PATH.BASE} element={<Main />} />
+      <Route path={BROWSER_PATH.CART} element={<Cart />} />
+      <Route path={BROWSER_PATH.DETAILS}>
         <Route path={":id"} element={<Details />} />
       </Route>
-      <Route path={"/join"} element={<Join />} />
-      <Route path={"/login"} element={<Login />} />
-      <Route path={"/my"} element={<My />} />
-      <Route path={"/outfit"} element={<Outfit />} />
-      <Route path={"/product"} element={<Product />} />
-      <Route path={"/review"} element={<Review />} />
+      <Route path={BROWSER_PATH.JOIN} element={<Join />} />
+      <Route path={BROWSER_PATH.LOGIN} element={<Login />} />
+      <Route path={BROWSER_PATH.MY} element={<My />} />
+      <Route path={BROWSER_PATH.OUTFIT} element={<Outfit />} />
+      <Route path={BROWSER_PATH.PRODUCT} element={<Product />} />
+      <Route path={BROWSER_PATH.REVIEW} element={<Review />} />
       <Route path={"*"} element={<NotFound />} />
     </BrowserRoutes>
   );

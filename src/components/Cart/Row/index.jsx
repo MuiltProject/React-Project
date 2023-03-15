@@ -30,7 +30,7 @@ function Row({ cart }) {
           <Checkbox defaultChecked sx={{ "& .MuiSvgIcon-root": { fontSize: 28 } }} />
         </S.Index>
         <S.Wrapper>
-          <S.StyledLink to={`/details/${cart.productId}`}>
+          <S.StyledLink to={`/details/${cart.product_id}`}>
             <S.Pic src={cart.image} alt=""></S.Pic>
             <S.Name>{cart.name}</S.Name>
           </S.StyledLink>
