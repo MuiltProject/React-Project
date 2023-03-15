@@ -4,7 +4,7 @@ const MEMBER_RULE = {
     MAX_LENGTH: 20,
   },
   PASSWORD: {
-    MIN_LENGTH: 8,
+    MIN_LENGTH: 4,
     MAX_LENGTH: 16,
   },
   PHONE_NUMBER: {

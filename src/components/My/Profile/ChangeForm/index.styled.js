@@ -4,7 +4,7 @@ const Container = styled.div``;
 
 const StyledForm = styled.form`
   display: flex;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
   margin-bottom: 15px;
 `;

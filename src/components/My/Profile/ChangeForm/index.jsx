@@ -7,6 +7,7 @@ import * as S from "./index.styled";
 import { API_PATH } from "../../../../constants/path";
 import { EMAIL_REGEX, PHONE_NUMBER_REGEX } from "../../../../utils/validate";
 import { MEMBER_RULE } from "../../../../constants/rule";
+import { CLIENT_ERROR_MESSAGE } from "../../../../constants/message";
 
 function PasswordForm() {
   const [nowPassword, setNowPassword] = useState("");
@@ -31,6 +32,10 @@ function PasswordForm() {
 
   const hasNewPassword = () => {
     return newPassword !== "";
+  };
+
+  const validatePasswordByLength = (password) => {
+    return MEMBER_RULE.PASSWORD.MIN_LENGTH <= password.length && password.length <= MEMBER_RULE.PASSWORD.MAX_LENGTH;
   };
 
   const equalsNewPassword = () => {
@@ -73,6 +78,7 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
+        {!validatePasswordByLength(nowPassword) && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD}</S.Warning>}
         <TextField
           type={"password"}
           id="newPassword"
@@ -81,6 +87,7 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
+        {!validatePasswordByLength(newPassword) && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_PASSWORD}</S.Warning>}
         <TextField
           type={"password"}
           id="validatePassword"
@@ -89,9 +96,13 @@ function PasswordForm() {
           inputProps={{ maxLength: MEMBER_RULE.PASSWORD.MAX_LENGTH }}
           variant="standard"
         />
-        {!equalsNewPassword() && <S.Warning>비밀번호가 동일하지 않습니다.</S.Warning>}
+        {!equalsNewPassword() && <S.Warning>{CLIENT_ERROR_MESSAGE.CHANGE.INVALID_CONFIRM_PASSWORD}</S.Warning>}
       </S.StyledForm>
-      {equalsNewPassword() && hasNowPassword() && hasNewPassword() ? (
+      {equalsNewPassword() &&
+      hasNowPassword() &&
+      hasNewPassword() &&
+      validatePasswordByLength(nowPassword) &&
+      validatePasswordByLength(newPassword) ? (
         <Button variant="outlined" onClick={changePassword}>
           변경
         </Button>
