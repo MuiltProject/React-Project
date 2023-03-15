@@ -125,7 +125,7 @@ function PasswordForm() {
   );
 }
 
-function EmailForm() {
+function EmailForm({ nowEmail }) {
   const [email, setEmail] = useState("");
 
   const getEmail = (e) => {
@@ -138,6 +138,10 @@ function EmailForm() {
 
   const validateEmail = () => {
     return EMAIL_REGEX.test(email);
+  };
+
+  const equalsEmail = () => {
+    return nowEmail === email;
   };
 
   const changeEmail = async () => {
@@ -167,9 +171,10 @@ function EmailForm() {
     <S.Container>
       <S.StyledForm>
         <TextField type={"email"} id="email" onChange={getEmail} label="새 이메일" variant="standard" />
-        {!validateEmail() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_EMAIL}</S.Warning>}
+        {!validateEmail() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_EMAIL.BASE}</S.Warning>}
+        {equalsEmail() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_EMAIL.CHANGE}</S.Warning>}
       </S.StyledForm>
-      {hasEmail() && validateEmail() ? (
+      {hasEmail() && validateEmail() && !equalsEmail(nowEmail, email) ? (
         <Button variant="outlined" onClick={changeEmail}>
           변경
         </Button>

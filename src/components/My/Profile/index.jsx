@@ -39,7 +39,7 @@ function Profile({ name, email, phoneNumber }) {
                 <S.NavSelectHeader>이메일 변경</S.NavSelectHeader>
                 <S.NavHeader onClick={() => changeOption(2)}>전화번호 변경</S.NavHeader>
               </S.NavWrapper>
-              <EmailForm />
+              <EmailForm nowEmail={email} />
             </>
           )}
           {option === 2 && (
