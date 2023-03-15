@@ -5,7 +5,8 @@ import { TextField, Button } from "@mui/material";
 import * as S from "./index.styled";
 
 import { API_PATH } from "../../../../constants/path";
-import { EMAIL_REGEX } from "../../../../utils/validate";
+import { EMAIL_REGEX, PHONE_NUMBER_REGEX } from "../../../../utils/validate";
+import { MEMBER_RULE } from "../../../../constants/rule";
 
 function PasswordForm() {
   const [nowPassword, setNowPassword] = useState("");
@@ -156,20 +157,43 @@ function EmailForm() {
   );
 }
 
-function PhoneNumberForm() {
-  const [phoneNumber, setPhoneNumber] = useState({});
+function PhoneNumberForm({ nowPhoneNumber }) {
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const getPhoneNumber = (e) => {
     setPhoneNumber(e.target.value);
     console.log(phoneNumber);
   };
 
+  const hasPhoneNumber = () => {
+    return phoneNumber !== "";
+  };
+
+  const validatePhoneNumber = () => {
+    return PHONE_NUMBER_REGEX.test(phoneNumber);
+  };
+
   return (
     <S.Container>
       <S.StyledForm>
-        <TextField type={"tel"} id="phoneNumber" onChange={getPhoneNumber} label="변경할 전화번호" variant="standard" />
+        <TextField
+          type={"tel"}
+          id="phoneNumber"
+          onChange={getPhoneNumber}
+          label="변경할 전화번호"
+          placeholder={nowPhoneNumber}
+          variant="standard"
+          inputProps={{ maxLength: MEMBER_RULE.PHONE_NUMBER.MAX_LENGTH }}
+        />
+        {!validatePhoneNumber() && hasPhoneNumber() && <S.Warning>올바르지 않은 전화번호 형식입니다.</S.Warning>}
       </S.StyledForm>
-      <Button variant="outlined">변경</Button>
+      {hasPhoneNumber() && validatePhoneNumber() ? (
+        <Button variant="outlined">변경</Button>
+      ) : (
+        <Button disabled variant="outlined">
+          변경
+        </Button>
+      )}
     </S.Container>
   );
 }
