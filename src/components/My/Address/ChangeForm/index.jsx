@@ -5,6 +5,7 @@ import { TextField, Button } from "@mui/material";
 import * as S from "./index.styled";
 
 import { API_PATH } from "../../../../constants/path";
+import { MEMBER_RULE } from "../../../../constants/rule";
 
 function Form() {
   const [recipient, setRecipient] = useState("");
@@ -69,8 +70,20 @@ function Form() {
   return (
     <S.Container>
       <S.StyledForm>
-        <TextField id="recipient" onChange={getRecipient} label="수취인 변경" variant="standard" />
-        <TextField id="zipCode" onChange={getZipCode} label="우편번호 변경" variant="standard" />
+        <TextField
+          id="recipient"
+          onChange={getRecipient}
+          label="수취인 변경"
+          inputProps={{ maxLength: MEMBER_RULE.ADDRESS.RECIPIENT.MAX_LENGTH }}
+          variant="standard"
+        />
+        <TextField
+          id="zipCode"
+          onChange={getZipCode}
+          label="우편번호 변경"
+          inputProps={{ maxLength: MEMBER_RULE.ADDRESS.ZIP_CODE.MAX_LENGTH }}
+          variant="standard"
+        />
         <TextField id="address" onChange={getAddress} label="주소 변경" variant="standard" />
       </S.StyledForm>
       {hasAddress() || hasRecipient() || hasZicCode() ? (

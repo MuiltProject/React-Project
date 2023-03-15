@@ -1,5 +1,6 @@
 const MEMBER_RULE = {
   NAME: {
+    MIN_LENGTH: 1,
     MAX_LENGTH: 20,
   },
   PASSWORD: {
@@ -7,9 +8,14 @@ const MEMBER_RULE = {
     MAX_LENGTH: 16,
   },
   PHONE_NUMBER: {
+    MIN_LENGTH: 12,
     MAX_LENGTH: 13,
   },
   ADDRESS: {
+    RECIPIENT: {
+      MIN_LENGTH: 1,
+      MAX_LENGTH: 20,
+    },
     ZIP_CODE: {
       MAX_LENGTH: 5,
     },
