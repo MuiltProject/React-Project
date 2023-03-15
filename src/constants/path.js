@@ -19,6 +19,7 @@ const API_PATH = {
   MY: {
     BASE: "http://localhost:4000/my", // GET API
     CHANGE_ADDRESS: "https://reqres.in/api/users", // POST API
+    CHANGE_EMAIL: "http://reqres.in/api/users", // POST API
     CHANGE_PASSWORD: "https://reqres.in/api/users", // POST API
   },
   PRODUCT: "http://localhost:4000/products", // GET

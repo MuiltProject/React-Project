@@ -5,6 +5,7 @@ import { TextField, Button } from "@mui/material";
 import * as S from "./index.styled";
 
 import { API_PATH } from "../../../../constants/path";
+import { EMAIL_REGEX } from "../../../../utils/validate";
 
 function PasswordForm() {
   const [nowPassword, setNowPassword] = useState("");
@@ -88,11 +89,41 @@ function PasswordForm() {
 }
 
 function EmailForm() {
-  const [email, setEmail] = useState({});
+  const [email, setEmail] = useState("");
 
   const getEmail = (e) => {
     setEmail(e.target.value);
-    console.log(email);
+  };
+
+  const hasEmail = () => {
+    return email !== "";
+  };
+
+  const validateEmail = () => {
+    return EMAIL_REGEX.test(email);
+  };
+
+  const changeEmail = async () => {
+    const formData = new FormData();
+
+    formData.append("email", email);
+
+    await axios({
+      method: "POST",
+      url: API_PATH.MY.CHANGE_EMAIL, // TODO: 백엔드 서버로 교체
+      mode: "cors",
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      data: formData,
+    })
+      .then((result) => {
+        formData.forEach((value, key) => console.log("key : " + key + ", value : " + value));
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -100,7 +131,15 @@ function EmailForm() {
       <S.StyledForm>
         <TextField type={"email"} id="email" onChange={getEmail} label="새 이메일" variant="standard" />
       </S.StyledForm>
-      <Button variant="outlined">변경</Button>
+      {hasEmail() && validateEmail() ? (
+        <Button variant="outlined" onClick={changeEmail}>
+          변경
+        </Button>
+      ) : (
+        <Button disabled variant="outlined">
+          변경
+        </Button>
+      )}
     </S.Container>
   );
 }
