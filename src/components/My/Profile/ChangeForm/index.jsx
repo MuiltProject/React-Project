@@ -157,6 +157,7 @@ function EmailForm() {
     <S.Container>
       <S.StyledForm>
         <TextField type={"email"} id="email" onChange={getEmail} label="새 이메일" variant="standard" />
+        {!validateEmail() && <S.Warning>{CLIENT_ERROR_MESSAGE.INVALID_EMAIL}</S.Warning>}
       </S.StyledForm>
       {hasEmail() && validateEmail() ? (
         <Button variant="outlined" onClick={changeEmail}>
