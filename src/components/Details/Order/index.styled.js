@@ -8,6 +8,7 @@ const BottomLine = styled.div`
   border-bottom-color: #807675;
   border-bottom-width: 2px;
   border-bottom-style: solid;
+  padding-bottom: 10px;
 `;
 
 const TopLine = styled.h5`

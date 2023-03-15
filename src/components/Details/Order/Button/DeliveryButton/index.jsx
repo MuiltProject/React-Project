@@ -23,13 +23,12 @@ function DeliveryButton() {
       <Overlay
         show={show}
         target={target}
-        placement="bottom"
+        placement="right"
         container={ref}
         containerPadding={20}
         
       >
         <Popover id="popover-contained">
-            {/* <Popover.Header as="h4">배송 방법</Popover.Header> */}
                  <S.Text>
                    <strong>택배배송</strong><br/> 무료배송 / 18시 이전 주문 시 오늘 출고 예정<br/>
                   <strong>매장픽업</strong><br/> 온라인 구매 후 지정 매장에서 수령

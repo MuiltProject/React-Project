@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 const TableOption = styled.table`
-  width: 1000px;
-  height: 400px;
+  width: 450px;
+  height: 200px;
 `;
 
 const StyledTable = styled.table`

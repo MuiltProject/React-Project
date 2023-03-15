@@ -13,8 +13,8 @@ const Text = styled.p`
 `;
 
 const Image = styled.img`
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 `;
 
 const ImageContainer = styled.div`

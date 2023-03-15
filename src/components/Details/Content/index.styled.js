@@ -31,18 +31,25 @@ const Text = styled.h3`
   top: 0;
 `;
 
-const Related = styled.h4`
-  position: relative;
-  left: -430px;
-  top: 0;
-  padding-bottom: 20px;
+const Info = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 150px;
 `;
 
-const RelatedBorder = styled.div`
-  border-top-color: #807675;
-  border-top-width: 2px;
-  border-top-style: solid;
-  padding-top: 30px;
+const Related = styled.div`
+  position: relative;
+  width: 80%;
+  top: 0;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom-color: #807675;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #807675;
 `;
 
 const Size = styled.h3`
@@ -56,6 +63,6 @@ export {
   ImageContainer,
   ImageWrapper,
   Related,
-  RelatedBorder,
   Size,
+  Info,
 };
