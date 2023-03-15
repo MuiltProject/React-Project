@@ -47,7 +47,7 @@ function PasswordForm() {
 
     await axios({
       method: "POST",
-      url: API_PATH.MY.CHANGE_PASSWORD, // TODO: 백엔드 서버로 교체
+      url: API_PATH.MY.CHANGE.PASSWORD, // TODO: 백엔드 서버로 교체
       mode: "cors",
       headers: {
         "Content-Type": "multipart/form-data",
@@ -123,7 +123,7 @@ function EmailForm() {
 
     await axios({
       method: "POST",
-      url: API_PATH.MY.CHANGE_EMAIL, // TODO: 백엔드 서버로 교체
+      url: API_PATH.MY.CHANGE.EMAIL, // TODO: 백엔드 서버로 교체
       mode: "cors",
       headers: {
         "Content-Type": "multipart/form-data",
@@ -173,6 +173,29 @@ function PhoneNumberForm({ nowPhoneNumber }) {
     return PHONE_NUMBER_REGEX.test(phoneNumber);
   };
 
+  const changePhoneNumber = async () => {
+    const formData = new FormData();
+
+    formData.append("phone_number", phoneNumber);
+
+    await axios({
+      method: "POST",
+      url: API_PATH.MY.CHANGE.PHONE_NUMBER, // TODO: 백엔드 서버로 교체
+      mode: "cors",
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      data: formData,
+    })
+      .then((result) => {
+        formData.forEach((value, key) => console.log("key : " + key + ", value : " + value)); // 데이터 확인용
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <S.Container>
       <S.StyledForm>
@@ -188,7 +211,9 @@ function PhoneNumberForm({ nowPhoneNumber }) {
         {!validatePhoneNumber() && hasPhoneNumber() && <S.Warning>올바르지 않은 전화번호 형식입니다.</S.Warning>}
       </S.StyledForm>
       {hasPhoneNumber() && validatePhoneNumber() ? (
-        <Button variant="outlined">변경</Button>
+        <Button variant="outlined" onClick={changePhoneNumber}>
+          변경
+        </Button>
       ) : (
         <Button disabled variant="outlined">
           변경

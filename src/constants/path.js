@@ -18,9 +18,12 @@ const API_PATH = {
   CART: "http:localhost:4000/cart", // GET API
   MY: {
     BASE: "http://localhost:4000/my", // GET API
-    CHANGE_ADDRESS: "https://reqres.in/api/users", // POST API
-    CHANGE_EMAIL: "http://reqres.in/api/users", // POST API
-    CHANGE_PASSWORD: "https://reqres.in/api/users", // POST API
+    CHANGE: {
+      ADDRESS: "https://reqres.in/api/users", // POST API
+      EMAIL: "http://reqres.in/api/users", // POST API
+      PASSWORD: "https://reqres.in/api/users", // POST API
+      PHONE_NUMBER: "https://reqres.in/api/users", // POST API
+    },
   },
   PRODUCT: "http://localhost:4000/products", // GET
 };

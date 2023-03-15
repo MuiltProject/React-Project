@@ -50,7 +50,7 @@ function Form() {
 
     await axios({
       method: "POST",
-      url: API_PATH.MY.CHANGE_ADDRESS, // TODO: 백엔드 서버로 교체
+      url: API_PATH.MY.CHANGE.ADDRESS, // TODO: 백엔드 서버로 교체
       mode: "cors",
       headers: {
         "Content-Type": "multipart/form-data",
