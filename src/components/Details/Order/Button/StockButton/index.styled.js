@@ -19,4 +19,10 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-export { Button, CloseButton };
+const MessageBox = styled.div`
+  background-color: #ede3d7;
+  padding: 7px 10px;
+  border-radius: 5px;
+`;
+
+export { Button, CloseButton, MessageBox };
