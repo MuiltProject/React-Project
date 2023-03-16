@@ -5,15 +5,15 @@ const LinkMenu = () => {
   
   return (
     <S.Container>
-      <S.StyledLink to="/details">
+      <S.StyledLink to="/">
         HOME
       </S.StyledLink>
       <span>{">"}</span>
-      <S.StyledLink to="/details" >
+      <S.StyledLink to="/product" >
         WOMEN
       </S.StyledLink>
       <span>{">"}</span>
-      <S.StyledLink to="/details" >
+      <S.StyledLink to="/product" >
         OUTER
       </S.StyledLink>
     </S.Container>
