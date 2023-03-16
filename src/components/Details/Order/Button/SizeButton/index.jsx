@@ -18,7 +18,9 @@ function SizeButton() {
                 <Modal.Header>
                     <Modal.Title>사이즈 가이드</Modal.Title>
                 </Modal.Header>
-                <Modal.Body><SizeGuide/></Modal.Body>
+                <Modal.Body>
+                    <SizeGuide/>
+                    </Modal.Body>
                 <Modal.Footer>
                     <S.CloseButton className="btn_close" variant="secondary" onClick={handleClose}>
                         닫기
