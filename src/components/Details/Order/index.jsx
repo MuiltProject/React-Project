@@ -11,26 +11,25 @@ const OrderContainer = () => {
   return (
     <div>
       <ul>
-        <S.BottomLine>
+        
           <S.List>
-            <h4>왁스드 코튼 트렌치 코트</h4>
+          <h4>왁스드 코튼 트렌치 코트</h4> 
           </S.List>
 
-          <S.List>159,900 원</S.List>
+          <S.List>159,900 원</S.List> 
           <br />
           <S.List>
             <div>
-              <span>10001</span>
+            <S.BottomLine><span>10001</span></S.BottomLine>
             </div>
           </S.List>
-        </S.BottomLine>
+        
 
         <br />
         <div>
-          {/* <S.Text> */}
-            {/* 라펠 칼라 트렌치 코트. 어깨와 커프스 부분에 탭이 달린 긴소매 디자인. 옆면 포켓 디테일. 같은 소재 리본 스타일
-            벨트. */}
-          {/* </S.Text> */}
+        라펠 칼라 트렌치 코트. 어깨와 커프스 부분에 탭이 달린 긴소매 디자인. 옆면 포켓 디테일. 
+    같은 소재 리본 스타일 벨트.
+
         </div>
         <br />
 

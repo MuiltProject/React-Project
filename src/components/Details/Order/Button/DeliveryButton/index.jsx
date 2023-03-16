@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import Popover from 'react-bootstrap/Popover';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,7 +22,7 @@ function DeliveryButton() {
       <Overlay
         show={show}
         target={target}
-        placement="right"
+        placement="bottom"
         container={ref}
         containerPadding={20}
         

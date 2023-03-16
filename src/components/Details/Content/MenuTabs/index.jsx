@@ -14,11 +14,6 @@ function MenuTabs({ onReletedTabClick }) {
     <Tab.Container id="tabs" defaultActiveKey="Content">
       <Nav justify variant="tabs">
         <Nav.Item>
-          <Nav.Link style={StyledLink}>
-            상세정보
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
           <Nav.Link eventKey="RelatedProducts" onClick={handleReletedTabClick} style={StyledLink}>
             연관상품
           </Nav.Link>

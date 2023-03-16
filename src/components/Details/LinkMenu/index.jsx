@@ -8,11 +8,11 @@ const LinkMenu = () => {
       <S.StyledLink to="/">
         HOME
       </S.StyledLink>
-      <span>{">"}</span>
+      <span>{" > "}</span>
       <S.StyledLink to="/product" >
         WOMEN
       </S.StyledLink>
-      <span>{">"}</span>
+      <span>{" > "}</span>
       <S.StyledLink to="/product" >
         OUTER
       </S.StyledLink>

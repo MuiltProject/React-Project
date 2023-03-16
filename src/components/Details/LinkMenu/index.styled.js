@@ -8,6 +8,11 @@ const Container = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #807675;
+
+  &:hover {
+    color: #0f010d;
+    font-weight: bold;
+  }
 `;
 
 export { Container, StyledLink };

@@ -31,38 +31,8 @@ const Text = styled.h3`
   top: 0;
 `;
 
-const Info = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin-top: 150px;
-`;
-
-const Related = styled.div`
-  position: relative;
-  width: 80%;
-  top: 0;
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom-color: #807675;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  margin-bottom: 30px;
-  font-size: 24px;
-  color: #807675;
-`;
-
 const Size = styled.h3`
   padding-bottom: 20px;
 `;
 
-export {
-  Container,
-  Text,
-  Image,
-  ImageContainer,
-  ImageWrapper,
-  Related,
-  Size,
-  Info,
-};
+export { Container, Text, Image, ImageContainer, ImageWrapper, Size };
