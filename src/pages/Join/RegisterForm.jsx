@@ -44,7 +44,7 @@ const RegisterForm = () => {
   */
     const pwRegExp = /^[a-zA-z0-9]{8,12}$/;
     if (!pwRegExp.test(formData.pw))
-      setPwError("숫자+영문자 조합으로 8자리~12자리 입력해주세요!");
+      setPwError("숫자 + 영문자 조합으로 8자리~12자리 입력해주세요!");
     else setPwError("");
 
     if (formData.pw !== formData.pwCheck)
