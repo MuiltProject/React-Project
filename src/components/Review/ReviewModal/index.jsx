@@ -22,14 +22,12 @@ function ReviewModal({CloseModal, data}){
                 <S.Review_Modal_InfoStarSection>
                 <S.Review_Modal_InfoStar_StarIDContaner>
                 <S.Review_Modal_InfoStar_Star>&nbsp;⭐⭐⭐⭐⭐</S.Review_Modal_InfoStar_Star>
-                {/* 추후 리뷰 별점 기능 구현? */}
                 <S.Review_Modal_InfoStar_userID>&nbsp;&nbsp;{data?.account}</S.Review_Modal_InfoStar_userID>
                 </S.Review_Modal_InfoStar_StarIDContaner>
                 </S.Review_Modal_InfoStarSection>           
                      <S.Review_Modal_ContentSection>
                     <S.Review_Modal_Content>
                         {data?.content}
-                    {/*  */}
                     </S.Review_Modal_Content>
                      <S.Review_Modal_BuyItemBox>
                         <S.Review_Modal_BuyItemImage src={data?.image}></S.Review_Modal_BuyItemImage>

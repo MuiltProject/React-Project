@@ -25,10 +25,6 @@ function BoardPage({ totalContents, contentsPerPage, currentPage, setCurrentPage
     navigate(`/review?page=${page}`) ; // 쿼리스트링 추가 
   };
 
-  // useEffect(() => {
-  //   setCurrentPage(startPage);
-  // }, [startPage, setCurrentPage]);
-
   useEffect(()=>{
     const params = new URLSearchParams(location.search); // URL 쿼리스트링 파싱
     const page = Number(params.get('page')) || 1;
@@ -45,7 +41,6 @@ function BoardPage({ totalContents, contentsPerPage, currentPage, setCurrentPage
       setCurrentPage(page); // 쿼리스트링을 현재 페이지로 변경
     }
   }, [location.search, currentPage, setCurrentPage]);
-
 
   const pageNumbers = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
 

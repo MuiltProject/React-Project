@@ -19,10 +19,11 @@ const CategoryButtonContainer = styled.div`
   justify-content: center;
   align-items : center;
   height : 4%;
+  width : 60%;
 `;
 const CategoryButton = styled.button`
-  background-color : white;
-  color : #807675;
+  background-color: ${({ active }) => (active ? '#edf4fb' : 'white')};
+  color :${({ active }) => (active ? '#1976d2' : '#807675')}; 
   border: 1px solid #ddd;
   border-radius: 1px;
   padding: 8px 12px;
@@ -32,7 +33,7 @@ const CategoryButton = styled.button`
   width : 15%;
   height : 55%;
   &:hover {
-  background-color: #ddd;
+  background-color: ${({ active }) => (active ? '#edf4fb' : '#f5f5f5')};
   }
 `;
 

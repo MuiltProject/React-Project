@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import * as S from "./index.styled";
 import ReviewListTitle from "./ReviewTitle";
 import ReviewListItem from "./ReviewContent";
-import ReviewSearch from "./ReviewSearch";
 import ReviewModal from "./ReviewModal";
 import BoardPage from "./ReviewPagenation";
 import reviewData from "../../assets/Review/reviewData.json";
@@ -78,11 +77,11 @@ function ReviewList(props) {
         <ReviewListTitle/>
         <S.CategoryButtonContainer>
         {categories.map((category) => (
-          <S.CategoryButton key={category} onClick={() => handleCategoryButtonClick(category)}>
+          <S.CategoryButton key={category} active={selectedCategory === category} onClick={() => handleCategoryButtonClick(category)}>
             {categoryLabels[category]}
           </S.CategoryButton>
         ))}
-        <ReviewSearch/>
+        {/* <ReviewSearch/> */}
         </S.CategoryButtonContainer>
         {modal && modalContent && <ReviewModal CloseModal={()=> setModal(false)} data={modalContent}/>}
         {reviewItems.length > 0 ? (
