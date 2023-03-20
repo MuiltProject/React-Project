@@ -8,16 +8,15 @@ import women from "../../assets/Banner/women.jpg";
 import kids from "../../assets/Banner/kids.jpg";
 
 function Banner() {
-  // TODO: 추후 정해지면 URL 변경 필요
   return (
     <Carousel indicators={false} navButtonsAlwaysVisible={true} animation={"slide"} duration={2000} interval={6000}>
-      <Link to="/">
+      <Link to="/product?target=men">
         <S.Banner src={men} alt="Men"></S.Banner>
       </Link>
-      <Link to="/">
+      <Link to="/product?target=women">
         <S.Banner src={women} alt="women"></S.Banner>
       </Link>
-      <Link to="/">
+      <Link to="/product?target=kids">
         <S.Banner src={kids} alt="Kids"></S.Banner>
       </Link>
     </Carousel>

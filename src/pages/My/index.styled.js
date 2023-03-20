@@ -27,6 +27,8 @@ const Header = styled.p`
   justify-content: center;
   width: 33%;
   height: 100%;
+  color: gray;
+  cursor: pointer;
 `;
 
 const SelectHeader = styled.p`
@@ -36,7 +38,8 @@ const SelectHeader = styled.p`
   justify-content: center;
   width: 33%;
   height: 100%;
-  font-weight: bold;
+  color: black;
+  cursor: pointer;
 `;
 
 const Section = styled.div`

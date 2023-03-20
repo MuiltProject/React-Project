@@ -16,17 +16,14 @@ const BoardPageButton = styled.button`
 border: none;
 margin: 0 5px;
 font-size: 15px;
-font-weight: ${({active}) => (active ? 'bold' : 'normal')};
-color: ${({active}) => (active ? 'white' : 'black')};
-background-color: ${({active}) => (active ? '#ede3d7' : 'transparent')};
-cursor: ${({active}) => (active ? 'default' : 'pointer')};
+font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
+color: ${({ active }) => (active ? 'white' : 'black')};
+background-color: ${({ active }) => (active ? '#ede3d7' : 'transparent')};
+cursor: ${({ active }) => (active ? 'default' : 'pointer')};
 &:disabled {
   color: black;
   cursor: default;
 }
 `;
-
-
-
 
 export {BoardPageContainer, BoardPageButton }

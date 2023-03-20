@@ -1,49 +1,69 @@
 import React from "react";
 
 import * as S from "./index.styled";
-import Pic1 from "../../assets/Category/women.jpg";
+
+// TODO: 추후 분리할 예정
+import { Bag, Basic, Hat, Outer, Pant, Shoes, Top, Total } from "../../assets/Category/image";
+
+const MAIN_CATEGORIES = [
+  {
+    text: "전체",
+    img: Total,
+    path: "/product",
+  },
+  {
+    text: "모자",
+    img: Hat,
+    path: "/product?category=hat",
+  },
+  {
+    text: "아우터",
+    img: Outer,
+    path: "/product?category=outer",
+  },
+  {
+    text: "상의",
+    img: Top,
+    path: "/product?category=top",
+  },
+  {
+    text: "가방",
+    img: Bag,
+    path: "/product?category=bag",
+  },
+  {
+    text: "바지",
+    img: Pant,
+    path: "/product?category=pant",
+  },
+  {
+    text: "신발",
+    img: Shoes,
+    path: "/product?category=shoes",
+  },
+  {
+    text: "베이직",
+    img: Basic,
+    path: "/product?category=basic",
+  },
+];
 
 function Category() {
-  // TODO: 이미지 변경 필요
-  // 카테고리는 위에서 아래순으로 신상품, 모자, 아우터, 상의, 가방, 하의, 신발, 베이직 순이다.
+  // 전체, 모자, 아우터, 상의, 가방, 하의, 신발, 베이직
   return (
     <S.Container>
       <S.Header> Shop By Category </S.Header>
       <S.Section>
-        <S.StyledLink to="/example/new">
-          <S.Text>신상품</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="/example/hats">
-          <S.Text>모자</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="example/outers">
-          <S.Text>아우터</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="example/tops">
-          <S.Text>상의</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-      </S.Section>
-      <S.Section>
-        <S.StyledLink to="example/bags">
-          <S.Text>가방</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="example/pants">
-          <S.Text>하의</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="example/shoes">
-          <S.Text>신발</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
-        <S.StyledLink to="example/basic">
-          <S.Text>베이직</S.Text>
-          <S.Pic src={Pic1}></S.Pic>
-        </S.StyledLink>
+        {MAIN_CATEGORIES.map((category) => {
+          return (
+            <>
+              <S.StyledLink to={category.path}>
+                <S.Text>{category.text}</S.Text>
+                <S.Pic src={category.img}></S.Pic>
+              </S.StyledLink>
+            </>
+          );
+        })}
       </S.Section>
     </S.Container>
   );
