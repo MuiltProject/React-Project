@@ -9,6 +9,7 @@ const StyledTable = styled.table`
   width: 25%;
   text-align: center;
 `;
+
 const StyledTh = styled.th`
   width: 25%;
   text-align: center;

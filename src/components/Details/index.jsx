@@ -8,19 +8,14 @@ import { useRef } from 'react';
 import * as S from "./index.styled";
 
 function Detail() {
-  const sizeTableRef = useRef(null);
+  
   const relatedProductRef = useRef(null);
-
-  const handleSizeTabClick = () => {
-    sizeTableRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const handleReletedTabClick = () => {
     relatedProductRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-
     <div>
       <br/>
       <S.StyledLink>
@@ -28,7 +23,6 @@ function Detail() {
           <LinkMenu />
         </div>
       </S.StyledLink>
-
       <S.Container>
         <S.Slider>
           <div>
@@ -41,15 +35,14 @@ function Detail() {
           </div>
         </S.Order>
       </S.Container>
-      
       <br />
       <br />
-      <MenuTabs onSizeTabClick={handleSizeTabClick} onReletedTabClick={handleReletedTabClick}/>
+      <MenuTabs onReletedTabClick={handleReletedTabClick}/>
       <div>
-      <Content sizeTableRef={sizeTableRef} relatedProductRef={relatedProductRef}/>
+      <Content relatedProductRef={relatedProductRef}/>
       </div>
-      
     </div>
   );
 }
+
 export default Detail;

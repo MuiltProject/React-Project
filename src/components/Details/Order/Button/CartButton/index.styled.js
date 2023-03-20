@@ -10,4 +10,12 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export { Button };
+const MessageContainer = styled.div`
+  background-color: #0f010d;
+  color: white;
+  height: 200px;
+  width: 500px;
+  font-size: 20px;
+`;
+
+export { Button, MessageContainer };

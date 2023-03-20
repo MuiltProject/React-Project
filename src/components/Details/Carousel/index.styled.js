@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 80px;
+  padding: 0 30px;
+  margin: 30px auto;
 `;
 
 export { Container };

@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./index.styled";
 
-
   function SizeGuide() {
     return (
       <S.TableOption>
@@ -38,4 +37,4 @@ import * as S from "./index.styled";
       </S.TableOption>
     )}
 
-        export default SizeGuide;
+export default SizeGuide;

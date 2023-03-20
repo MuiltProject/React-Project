@@ -1,9 +1,8 @@
-// import styled from "@emotion/styled";
-// import Nav from "react-bootstrap/Nav";
+import styled from "@emotion/styled";
 
-const StyledLink = {
-  color: "#807675",
-  fontSize: "24px",
-};
+const Text = styled.div`
+  color: #807675;
+  font-size: 24px;
+`;
 
-export { StyledLink };
+export { Text };

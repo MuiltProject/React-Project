@@ -8,6 +8,7 @@ const Button = styled.button`
   margin: 0 20px;
   cursor: pointer;
 `;
+
 const CloseButton = styled.button`
   background-color: #e5cdce;
   color: white;

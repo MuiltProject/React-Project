@@ -6,14 +6,12 @@ import SizeGuide from "../../SizeGuide";
 function SizeButton() {
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return(
         <div>
             <S.Button className="btn" variant="outline-primary" onClick={handleShow}>사이즈 가이드</S.Button>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                     <Modal.Title>사이즈 가이드</Modal.Title>
@@ -30,4 +28,5 @@ function SizeButton() {
         </div>
     )
 }
+
 export default SizeButton;

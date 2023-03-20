@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
-import {StyledLink} from "./index.styled";
+import * as S from "./index.styled";
 
 function MenuTabs({ onReletedTabClick }) {
   
@@ -14,16 +14,13 @@ function MenuTabs({ onReletedTabClick }) {
     <Tab.Container id="tabs" defaultActiveKey="Content">
       <Nav justify variant="tabs">
         <Nav.Item>
-          <Nav.Link eventKey="RelatedProducts" onClick={handleReletedTabClick} style={StyledLink}>
-            연관상품
+          <Nav.Link eventKey="RelatedProducts" onClick={handleReletedTabClick}> 
+            <S.Text>연관상품</S.Text>
           </Nav.Link>
         </Nav.Item>
       </Nav>
-
     </Tab.Container>
   );
 }
 
 export default MenuTabs;
-
-

@@ -1,14 +1,18 @@
 import styled from "@emotion/styled";
 
+const Container = styled.div`
+  display: flex;
+`;
+
 const Button = styled.button`
   background-color: white;
   color: black;
   font-size: 15px;
   padding: 10px;
-
   margin: 0 20px;
   cursor: pointer;
 `;
+
 const CloseButton = styled.button`
   background-color: #e5cdce;
   color: white;
@@ -25,4 +29,4 @@ const MessageBox = styled.div`
   border-radius: 5px;
 `;
 
-export { Button, CloseButton, MessageBox };
+export { Container, Button, CloseButton, MessageBox };

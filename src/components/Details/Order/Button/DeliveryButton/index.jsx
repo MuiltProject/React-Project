@@ -4,7 +4,6 @@ import Popover from 'react-bootstrap/Popover';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as S from "./index.styled";
 
-
 function DeliveryButton() {
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState(null);
@@ -18,14 +17,12 @@ function DeliveryButton() {
   return (
     <div ref={ref}>
       <S.Button onClick={handleClick} >배송 방법</S.Button>
-
       <Overlay
         show={show}
         target={target}
         placement="bottom"
         container={ref}
         containerPadding={20}
-        
       >
         <Popover id="popover-contained">
                  <S.Text>
@@ -37,4 +34,5 @@ function DeliveryButton() {
     </div>
   );
 }
+
 export default DeliveryButton;

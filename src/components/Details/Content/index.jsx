@@ -2,7 +2,6 @@ import React from "react";
 import RelatedProduct from "./RelatedProduct";
 import * as S from "./index.styled";
 
-
 function Content({ relatedProductRef }) {
   return (
     <div>

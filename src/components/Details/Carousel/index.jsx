@@ -1,50 +1,45 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
-import coat1 from "../../../assets/Details/coat1.jpg";
-import coat2 from "../../../assets/Details/coat2.jpg";
-import coat3 from "../../../assets/Details/coat3.jpg";
-import coat4 from "../../../assets/Details/coat4.jpg";
-import coat5 from "../../../assets/Details/coat5.jpg";
-import coat6 from "../../../assets/Details/coat6.jpg";
-import coat7 from "../../../assets/Details/coat7.jpg";
-import coat8 from "../../../assets/Details/coat8.jpg";
+import product1 from "../../../assets/Details/product1.jpg";
+import product2 from "../../../assets/Details/product2.jpg";
+import product3 from "../../../assets/Details/product3.jpg";
+import product4 from "../../../assets/Details/product4.jpg";
+import product5 from "../../../assets/Details/product5.jpg";
+import product6 from "../../../assets/Details/product6.jpg";
+import product7 from "../../../assets/Details/product7.jpg";
+import product8 from "../../../assets/Details/product8.jpg";
+import * as S from "./index.styled";
 
 function SimpleSlider() {
   const data = [
     {
-      image: coat1,
+     image: product1,
     },
     {
-      image: coat2,
+      image: product2,
     },
     {
-      image: coat3,
+      image: product3,
     },
     {
-      image: coat4,
+      image: product4,
     },
     {
-      image: coat5,
+      image: product5,
     },
     {
-      image: coat6,
+      image: product6,
     },
     {
-      image: coat7,
+      image: product7,
     },
     {
-      image: coat8,
+      image: product8,
     },
   ];
 
   return (
-    <div className="App">
-      <div style={{ textAlign: "center" }}>
-        <div
-          style={{
-            padding: "0 30px",
-          }}
-        >
+        <S.Container>
           <Carousel
             data={data}
             time={2000}
@@ -52,20 +47,13 @@ function SimpleSlider() {
             automatic={true}
             dots={false}
             pauseIconColor="white"
-            pauseIconSize="40px"
+            pauseIconSize="50px"
             slideBackgroundColor="#EDE3D7"
             slideImageFit="cover"
             thumbnails={true}
-            thumbnailWidth="100px"
-            style={{
-              textAlign: "center",
-
-              margin: "30px auto",
-            }}
+            thumbnailWidth="120px"
           />
-        </div>
-      </div>
-    </div>
+        </S.Container>
   );
 }
 

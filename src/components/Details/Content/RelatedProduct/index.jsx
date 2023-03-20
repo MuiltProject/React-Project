@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import c1 from "../../../../assets/Details/c1.jpg";
 import c2 from "../../../../assets/Details/c2.jpg";
 import c3 from "../../../../assets/Details/c3.jpg";
@@ -7,7 +7,8 @@ import c5 from "../../../../assets/Details/c5.jpg";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import * as S from "./index.styled";
-
+import Data from "../../Data/detailsdata.json"
+import axios from "axios";
 
 function RelatedProduct() {
   const data = [
@@ -40,7 +41,6 @@ function RelatedProduct() {
   const visibleData = data.slice(currentIndex, currentIndex + numVisible);
   
   return (
-    
         <S.Container >
           <S.Button onClick={handlePrevClick}>
             <BsChevronLeft />
@@ -59,7 +59,6 @@ function RelatedProduct() {
             <BsChevronRight />
           </S.Button>
       </S.Container>
-    
   );
 }
 
