@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import { Button, SelectedButton } from "./index.styled";
+import * as S from "./index.styled";
 
 function SizeCheck() {
   const [radioValue, setRadioValue] = useState("1");
@@ -15,7 +15,7 @@ function SizeCheck() {
     <ButtonGroup>
     {radios.map((radio, idx) => (
       radioValue === radio.value ? 
-      <SelectedButton
+      <S.SelectedButton
         key={idx}
         id={`radio-${idx}`}
         type="radio"
@@ -26,8 +26,8 @@ function SizeCheck() {
         checked={radioValue === radio.value}
       >
         {radio.name}
-      </SelectedButton> : 
-      <Button 
+      </S.SelectedButton> : 
+      <S.Button 
         key={idx}
         id={`radio-${idx}`}
         type="radio"
@@ -37,7 +37,7 @@ function SizeCheck() {
         onClick={(e) => setRadioValue(e.currentTarget.value)}
         checked={radioValue === radio.value}>
         {radio.name}
-      </Button>
+      </S.Button>
     ))}
   </ButtonGroup>
   );
