@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import axios from "axios";
+import axios from "axios";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PwInput";
 
@@ -21,20 +21,19 @@ function LoginForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(`Email: ${inputEmail}\nPassword: ${inputPw}`);
-  }
-  /* 
-function handelsSubmit (event) {
-    event.preventDefault();
-    axios.post("/member/login", {email, pw})
-    .then(response => {
+    axios
+      .post("/member/login", { inputEmail, inputPw })
+      .then((response) => {
         console.log(response.data);
-    })
-    .catch(error => {
+        if (response.status === 200) {
+          navigate(-1);
+        }
+      })
+      .catch((error) => {
         console.log(error);
-    });
-};
-*/
+        alert("이메일과 비밀번호를 다시 확인해주세요!");
+      });
+  }
 
   //회원가입 버튼 누르면 Join페이지로 이동
   const goJoin = () => {

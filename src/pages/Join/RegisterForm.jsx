@@ -5,7 +5,8 @@ import PwCheck from "./PwCheck";
 import Name from "./Name";
 import Birth from "./Birth";
 import Phone from "./Phone";
-//import axios from 'axios';
+import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ const RegisterForm = () => {
     birth: "",
     phone: "",
   });
+
   const [emailError, setEmailError] = useState("");
   const [pwError, setPwError] = useState("");
   const [pwCheckError, setPwCheckError] = useState("");
@@ -25,10 +27,9 @@ const RegisterForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    /* 
     if (formData.email !== "") {
       try {
         const { data } = await axios.get("/member/{formData.email}");
@@ -40,8 +41,8 @@ const RegisterForm = () => {
       } catch (error) {
         console.log(error);
       }
-    }  
-  */
+    }
+
     const pwRegExp = /^[a-zA-z0-9]{8,12}$/;
     if (!pwRegExp.test(formData.pw))
       setPwError("숫자 + 영문자 조합으로 8자리~12자리 입력해주세요!");
@@ -55,25 +56,23 @@ const RegisterForm = () => {
     if (!birthRegExp.test(formData.birth))
       setBirthError("생년월일을 6자리의 숫자만 입력해주세요!");
     else setBirthError("");
-  };
-  /* 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-       await axios
-       .post("/member/join", formData)
-       .then(response => {
+
+    await axios
+      .post("/member/join", formData)
+      .then((response) => {
         console.log(response.data);
-       })
-       .catch(error => {
+        return <Navigate to="/login" replace={true} />;
+      })
+      .catch((error) => {
         console.log(error);
-       });      
-    };
-    */
+      });
+  };
 
   return (
     <form className="join-form" onSubmit={handleSubmit}>
       <h2>회원가입</h2>
       <Email handleChange={handleChange} value={formData.email} />
+      <p>{emailError}</p>
       <Pw handleChange={handleChange} value={formData.pw} />
       <p>{pwError}</p>
       <PwCheck handleChange={handleChange} value={formData.pwCheck} />
