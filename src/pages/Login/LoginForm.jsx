@@ -13,11 +13,16 @@ function LoginForm() {
   const handlePwChange = (event) => setInputPw(event.target.value);
 
   const login = () => {
+    // 관리자페이지로 이동
+    if (inputEmail === "admin" && inputPw === "1111") {
+      navigate("/admin"); 
+      return;
+    }
     if (inputEmail === "" || inputPw === "") {
       alert("이메일과 비밀번호를 입력해주세요!");
       return;
     }
-  };
+}
 
   function handleSubmit(event) {
     event.preventDefault();
