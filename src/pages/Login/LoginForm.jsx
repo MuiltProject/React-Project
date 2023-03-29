@@ -22,7 +22,7 @@ function LoginForm() {
       alert("이메일과 비밀번호를 입력해주세요!");
       return;
     }
-}
+};
 
   function handleSubmit(event) {
     event.preventDefault();
