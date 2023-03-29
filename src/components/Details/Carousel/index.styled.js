@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  padding: 0 30px;
-  margin: 30px auto;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  margin: 30px 0;
 `;
 
 export { Container };

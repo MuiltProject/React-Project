@@ -8,6 +8,7 @@ const BROWSER_PATH = {
   OUTFIT: "/outfit",
   PRODUCT: "/product",
   REVIEW: "/review",
+  ADMIN: "/admin",
 };
 
 // TODO: 추후 스프링과 연동하기

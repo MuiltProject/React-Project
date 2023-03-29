@@ -10,5 +10,6 @@ const NotFound = lazy(() => import("./NotFound/index"));
 const Outfit = lazy(() => import("./Outfit/index"));
 const Product = lazy(() => import("./Product/index"));
 const Review = lazy(() => import("./Review/index"));
+const Admin = lazy(() => import("./Admin/index"));
 
-export { Cart, Details, Join, Login, Main, My, NotFound, Outfit, Product, Review };
+export { Cart, Details, Join, Login, Main, My, NotFound, Outfit, Product, Review, Admin };
